@@ -157,7 +157,7 @@ export default function Navigbar() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Button className='mr-sm-2 my-2 right-btn btn-primary' href={process.env.REACT_APP_AEROCLUB}>Aero Club</Button>
+          <Button className='mr-sm-2 my-2 right-btn btn-primary' target="_blank" href={process.env.REACT_APP_AEROCLUB}>Aero Club</Button>
         </Navbar.Collapse>
       </Navbar>
     </>
