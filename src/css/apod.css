@@ -82,7 +82,14 @@
     .information{
         margin-top: 1.5rem !important;
     }
-    .hdimage img{
+    .hdimage img{   
+        display: block;
+        margin:1rem auto;
+        /* margin-bottom: 2rem; */
+    }
+    .hdimage iframe{
+        width: 95%;
+        height: 22rem;
         display: block;
         margin:1rem auto;
         margin-bottom: 2rem;
@@ -96,8 +103,24 @@
         max-height: 18rem;
     }
 }
+
 @media only screen and ( max-width:450px){
     .hdimage img{
         margin-bottom: 0;
+    }
+    .hdimage iframe{
+        height: 18rem;
+        margin-bottom: 0.9rem;
+    }
+}
+
+@media only screen and ( max-width:500px){
+    .hdimage iframe{
+        height: 20rem;
+    }
+}
+@media only screen and ( max-width:400px){
+    .hdimage iframe{
+        height: 16rem;
     }
 }
