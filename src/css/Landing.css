@@ -1,0 +1,74 @@
+.container-fluid {
+  margin: 0px 0px;
+  width: 100%;
+  padding: 0px 0px;
+  display: flex;
+  flex-flow: column;
+}
+
+.pagesl {
+  height: 91vh;
+  width: 100%;
+  margin: 0vh 0vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0,0.4)), url("../images/utils/landing2.gif") center center no-repeat;
+  background-size: cover;
+  padding-bottom: 0px;
+  background-attachment: fixed;
+  background-position: center;
+}
+.rempad {
+  padding: 0 0;
+}
+
+.logoback{
+  background-color: rgba(255,255,255, 0.4);
+  border-radius: 10px;
+}
+
+.landing {
+  height: 90vh;
+  margin: 0vh 0vw;
+  color: white;
+  text-shadow: 5px 2px 2px rgb(41, 41, 41);
+}
+
+.landing-logo {
+  height: 8rem;
+}
+@media (max-width: 770px) {
+  .landing {
+    height: 70vh !important;
+  }
+  .landing-logo {
+    height: 6rem;
+    width: auto;
+    padding-right: 4px;
+  }
+  .landing-about h1 {
+    font-size: larger;
+  }
+  .landing-about h2 {
+    font-size: large;
+    padding: 2px;
+  }
+}
+@media (max-width: 1000px) {
+  .landing-logo {
+    height: 6rem;
+    width: auto;
+    right: 0;
+  }
+  .landing-about h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 530px) {
+  .pagesl{
+    background-attachment: fixed;
+    background-size:cover;
+    height: 91vh;
+  }
+  .landing{
+    margin-top: 2rem !important;
+  }
+}

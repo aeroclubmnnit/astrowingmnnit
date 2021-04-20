@@ -1,0 +1,257 @@
+
+@import url('https://fonts.googleapis.com/css?family=Caveat|Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* body * {box-sizing: border-box;} */
+
+/* Design */
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+
+/* CUSTOM */
+/* img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box
+} */
+/* GRID */
+
+
+.pagesg {
+    height: 40vh;
+    width: 100%;
+    margin: 0vh 0vw;
+
+    /* background-image: url('https://unsplash.it/600/600'); */
+    background-size: cover;
+    padding-bottom: 0px;
+
+    background-color: #eee;
+    background-position: center;
+    /* background-size: cover; */
+    
+    animation: image 3s ease-in-out infinite alternate;
+  }
+
+  .overlayg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding-bottom: 80px;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.titleBoldg {
+    font-weight: 600;
+    font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.pageTitleg {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 45px;
+    text-align: center;
+    padding-top: 1.7em;
+}
+
+.container.gallery-container {
+    background-color: #fff;
+    color: #35373a;
+    min-height: 100vh;
+    padding: 30px 50px;
+}
+
+.gallery-container h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+}
+
+.gallery-container p.page-description {
+    text-align: center;
+    margin: 25px auto;
+    font-size: 18px;
+    color: #999;
+}
+
+.tz-gallery {
+    padding: 40px;
+    
+}
+
+.tx-gallery .lightbox img::after {
+  
+}
+
+/* Override bootstrap column paddings */
+.tz-gallery .row > div {
+    padding: 3px;
+    
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+    /* transform: scale(1.15); */
+    
+}
+
+.gallery-imageg {
+  display: block;
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 400ms ease-out;
+  /* width: 100%;
+height: 100%; */
+/* border: solid 10px rgb(179, 179, 179); */
+}
+
+.gallery-imageg:hover {
+  transform: scale(1.15);
+}
+
+.tz-gallery .lightbox:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    opacity: 0;
+    color: #fff;
+    font-size: 26px;
+    font-family: 'Glyphicons Halflings';
+    content: '\e003';
+    pointer-events: none;
+    z-index: 9000;
+    transition: 0.4s;
+}
+
+
+.tz-gallery .lightbox:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(85, 85, 180, 0.336);
+    content: '';
+    /* transform: scale(1.15); */
+    transition: 0.4s;
+}
+
+.tz-gallery .lightbox:hover:after,
+.tz-gallery .lightbox:hover:before {
+  /* transform: scale(1.15); */
+    opacity: 1;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+@media(max-width: 768px) {
+    body {
+        padding: 0;
+    }
+}
+
+/* .cont{
+    position: relative;
+    background-color: rgb(240, 240, 240); 
+     opacity: 0.4;
+} */
+
+/* .cont:after {
+    content:'';
+    background-image: url('../components/dronepic.jpg') center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity: 0.4;
+} */
+/* 
+.main{
+  max-width: 1200px;
+  margin: 0rem auto;
+  padding-bottom: 2rem;
+  background-color: rgb(194, 194, 194);
+  background-size: cover;
+} */
+
+
+/* 
+img {
+  height:35vh;
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+} */
+
+
+
+/* .cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} */
+/* 
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+} */
+
+/* .card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  /* overflow: hidden; */
+/* }  */
+
+
+
+
+/* .card_image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease-out;
+}
+
+.card_image:hover {
+    transform: scale(1.15);
+} */
+

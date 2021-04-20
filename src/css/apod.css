@@ -1,0 +1,103 @@
+.apod-container{
+    padding: 0;
+    border: 2px solid;
+    background-color: white;
+}
+
+.information{
+    flex: 1;
+}
+.hdimage img{
+    height: 35rem;
+    width: 35rem;
+}
+.hdimage iframe{
+    height: 35rem;
+    width: 35rem;
+}
+
+.scroller2
+{
+    text-align: justify;
+	margin-left: 15px;
+	float: left;
+	height: auto;
+	width: 25rem;
+	background: #F5F5F5;
+	overflow-y: auto;
+	margin-bottom: 25px;
+}
+
+.expl {
+    padding: 15px;
+}
+
+.force-overflow
+{
+	min-height: 100px;
+}
+
+#style-3::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgb(30, 81, 116);
+}
+
+
+.explanation{
+    text-align: justify;
+    max-height: 22rem;
+    overflow-y: auto;
+}
+
+@media only screen and ( max-width:990px){
+    .hdimage img{
+        height: 25rem;
+        width: auto;
+    }
+    .information h3{
+        font-size: medium;
+    }
+    .information p {
+        margin-top: 0 ;
+        font-size: small;
+        max-height: 18rem;
+    }
+}
+@media only screen and ( max-width:770px){
+    .information{
+        margin-top: 1.5rem !important;
+    }
+    .hdimage img{
+        display: block;
+        margin:1rem auto;
+        margin-bottom: 2rem;
+    }
+    .information h3{
+        font-size: medium;
+    }
+    .information p {
+        margin-top: 0 ;
+        font-size: x-small;
+        max-height: 18rem;
+    }
+}
+@media only screen and ( max-width:450px){
+    .hdimage img{
+        margin-bottom: 0;
+    }
+}

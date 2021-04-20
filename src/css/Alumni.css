@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,300,200");
+
+@import url("https://fonts.googleapis.com/css?family=Croissant+One");
+
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+
+@import url("https://fonts.googleapis.com/css?family=Caveat|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
+
+.overlaya {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  padding-bottom: 80px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.pagesa {
+  height: 40vh;
+  width: 100%;
+  margin: 0vh 0vw;
+
+  background-image: url("https://unsplash.it/600/600");
+  background-size: cover;
+  padding-bottom: 0px;
+
+  background-color: #eee;
+  background-position: center;
+  animation: image 3s ease-in-out infinite alternate;
+}
+
+.titleBolda {
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.pageTitlea {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 45px;
+  text-align: center;
+  padding-top: 1.7em;
+}
+
+
+.card-item {
+  margin: 3rem 3rem;
+  transition: transform 400ms ease-in;
+}
+
+.card-alumni {
+  transform: none !important;
+  transition: none !important;
+  height: 20rem !important;
+}
+
+.panel-title a {
+  color: rgb(22 ,101, 151);
+  text-decoration: none;
+}
+
+.faculty-container img{
+  height: 20rem;
+  width: 20rem;
+}
+.faculty-container .side-content p{
+  font-weight: 600;
+}
+
+.alumni-container {
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
+  sans-serif !important;
+  font-size: 14px !important;
+  /* margin: 50px auto 0 auto !important; */
+}
+.alumni-container .card-body{
+  /* background-color: rgb(10 ,83 ,248); */
+  background-color: #0f1a3a;
+  color: white;
+}
+.alumni-container .card-body a{
+  color: white;
+}
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.panel-group .panel {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+.panel-default {
+  border: none;
+}
+.panel-heading {
+  padding: 20px 15px;
+  border: none;
+  border-radius: 0;
+}
+.panel-default > .panel-heading {
+  color: #333;
+  background: none;
+  border-top: 1px solid #ddd;
+}
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border: none;
+}
+.panel-heading .accordion-toggle:after {
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  float: right;
+  color: rgb(19, 15, 15);
+}
+.panel-heading .accordion-toggle.collapsed:after {
+  content: "\f054";
+  color: rgb(212, 184, 184);
+}
+
+.alumni-container .panel-collapse{
+  background:#e3eafa;
+}
+
+@media screen and (max-width: 619px) {
+  .header {
+    font-size: larger !important;
+    margin-bottom: -1rem !important;
+  }
+  .faculty-container .content{
+    font-size: small;
+  }
+  .faculty-container .side-content{
+    float: none !important;
+    text-align: center;
+  }
+  .faculty-container .side-content h5{
+    font-size: medium;
+  }
+  .faculty-container .side-content p{
+    font-size: smaller;
+  }
+  .item-alumni{
+    margin: 3rem 0rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .topic {
+    font-size: 16px;
+  }
+  .paragr{
+    font-size: small;
+  }
+  
+  .quote {
+    font-size: medium !important;
+  }
+  .achievement div {
+    font-size: small !important;
+  }
+}
+
+@media only screen and (max-width: 960px){
+  .faculty-container img{
+    width: 15rem;
+    height: 15rem;
+  }
+}

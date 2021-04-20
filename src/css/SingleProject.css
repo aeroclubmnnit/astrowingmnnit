@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800");
+
+#header{
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+}
+
+.pagesp {
+    height: 60vh;
+    width: 100%;
+    margin: 0vh 0vw;
+
+    /* background-image: url('https://unsplash.it/600/600'); */
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    /* background-size: cover; */
+    padding-bottom: 0px;
+
+    background-color: #eee;
+    /* background-position: center; */
+    /* background-size: cover; */
+    
+    /* animation: image 3s ease-in-out infinite alternate; */
+  }
+
+.overlayp {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding-bottom: 80px;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.titleBoldp {
+    font-weight: 600;
+}
+.pageTitlep {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 45px;
+    padding-left: 4rem;
+    padding-top: 2em;
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+  
+  /* Then style the iframe to fit in the container div with full height and width */
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.photo__photo{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.photo__photo:hover{
+    transform: scale(1.5);
+}
+
+.subheaders{
+    text-decoration: underline;
+}
+
+  @media only screen and (max-width:500px)
+  {
+      .subheaders{
+        font-size: large;
+      }
+      .photo__desc > p{
+          font-size: smaller;
+      }
+  }

@@ -1,0 +1,41 @@
+
+/* .i-am-centered { margin: auto; max-width: 300px;} */
+
+@media (max-width: 640px){
+    .card-title{
+        font-size: x-large;
+        font-family: monospace;
+    }
+.card-text {
+    font-size: medium;
+    font-family: "Roboto";
+    /* text-align: center; */
+}
+.cardhgt {
+    height: auto;
+    background-color : transparent;
+    /* margin: 0 1rem 0 1rem; */
+}
+}
+
+.card-text {
+    font-family: "Roboto";
+}
+.cardhgt {
+    height: 18rem;
+    background-color : transparent;
+    /* margin: 0 1rem 0 1rem; */
+}
+.cardbd {
+    background-color: #007bff;
+    font-family: monospace;
+}
+.cardbd:hover {
+    
+    background-color: rgb(45, 78, 128);
+}
+
+.lststyle {
+    list-style-type:circle !important;
+    padding-inline-start: 10px;
+  }

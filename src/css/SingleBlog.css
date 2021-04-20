@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800");
+
+#header {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.post-heading {
+  margin-top: 2rem;
+}
+
+.body {
+  font-size: x-large;
+}
+
+article {
+  margin: auto;
+}
+
+.body a {
+  color: #a54141 !important;
+  font-weight: 500;
+}
+
+.postedBy-info{
+  font-size: medium;
+}
+
+@media only screen and (max-width: 800px) {
+  #header h1 {
+    font-size: x-large;
+  }
+  .post-heading h5 {
+    font-size: large;
+  }
+  .post-heading span {
+    font-size: smaller;
+  }
+  .body {
+    font-size: medium;
+  }
+  .blog-container-head {
+    font-size: large;
+  }
+  .blog-container-para {
+    font-size: small;
+  }
+  .blog-title{
+    font-size: 2rem;
+  }
+  .postedBy-info{
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .post-heading h5 {
+    font-size: small;
+  }
+  .post-heading span {
+    font-size: xx-small;
+  }
+  .blog-container-head {
+    font-size: medium;
+  }
+
+  .singleblog-contents h1 {
+    font-size: 1.8em;
+  }
+  .singleblog-contents h2 {
+    font-size: 1.8em;
+  }
+  .singleblog-contents h3 {
+    font-size: 1.8em;
+  }
+  .singleblog-contents h4 {
+    font-size: 1.8em;
+  }
+  .singleblog-contents h5 {
+    font-size: 1.8em;
+  }
+  .singleblog-contents h6 {
+    font-size: 1.8em;
+  }
+  .singleblog-contents p {
+    font-size: 0.9em;
+  }
+  .blog-title{
+    font-size: 1rem;
+  }
+  .postedBy-info{
+    font-size:xx-small;
+  }
+  .singleblog-pagesp{
+    height: 42vh;
+  }
+}

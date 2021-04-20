@@ -1,0 +1,201 @@
+/* .container-fluid{
+    margin: 0px 0px;
+    width: 100%;
+    padding: 0px 0px;
+    display: flex; 
+    flex-flow: column;
+    /* z-index:-1 ; */
+/* border-radius: 0.3rem; */
+/* }  */
+.container-fluid {
+  margin: 0px 0px;
+  width: 100%;
+  padding: 0px 0px;
+  display: flex;
+  flex-flow: column;
+  /* z-index:-1 ; */
+  /* border-radius: 0.3rem; */
+}
+
+.tickerv-wrap {
+  /* background: #eee; */
+  box-sizing: content-box;
+  height: 130px; /* Take note of this */
+  overflow: hidden; /* Hide scrollbars */
+  padding: 10px;
+}
+
+/* TICKER ANIMATION */
+@keyframes tickerv {
+  0% {
+    margin-top: 0;
+  }
+  /* Quite literally -ve height of wrapper */
+  20% {
+    margin-top: -26px;
+  } /* 1 X 25 px */
+  40% {
+    margin-top: -52px;
+  } /* 2 X 25 px */
+  60% {
+    margin-top: -78px;
+  } /* 3 X 25 px */
+  80% {
+    margin-top: -104px;
+  } /* Back to first line */
+  100% {
+    margin-top: 0;
+  } /* Back to first line */
+}
+.tickerv-wrap ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  animation-name: tickerv; /* Loop through items */
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0.5, 0);
+}
+.tickerv-wrap ul:hover {
+  /* Pause on mouse hover */
+  animation-play-state: paused;
+}
+
+/* ITEMS */
+.tickerv-wrap ul li {
+  background-color: rgba(61, 61, 61, 0.363);
+  color: rgb(199, 201, 202);
+  font-size: 14px;
+  line-height: 16px;
+  /* padding: 18px; */
+}
+.tickerv-wrap ul div {
+  /* background-color: rgba(238, 234, 234, 0.363); */
+  margin: 5px 0;
+  border: 5px solid rgb(82, 81, 80);
+  border-radius: 5px;
+
+  /* Same as wrapper height */
+}
+
+.rempad {
+  padding: 0 0;
+}
+.titleBold {
+  margin-top: 2rem !important;
+}
+.pageTitle {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 40px;
+  text-align: center;
+  /* padding-top: 50px; */
+}
+
+.pageOverlay .miniSep {
+  background-color: white;
+}
+
+.miniSep {
+  width: 100px;
+  height: 5px;
+  border-radius: 4px;
+  background-color: rgb(22 ,101, 151) !important;
+  /* padding-bottom: 10px; */
+  /* background-color: #3500d3; */
+  margin: auto;
+  /* margin-top: 15px; */
+}
+
+.containernews {
+  background: transparent;
+  color: black;
+}
+
+.card-cont {
+  background-color: rgba(255, 255, 255, 0.897);
+}
+
+.leftText {
+  width: calc(100% - 200px);
+  margin-left: 100px;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.pageTextCont {
+  width: 80%;
+  margin: auto;
+  padding: 20px 5px 40px 5px;
+  /* margin-top: 50px; */
+  line-height: 24px;
+}
+
+/* div {
+    display: block;
+} */
+
+.pages {
+  /* height: 80vh; */
+  width: 100%;
+  margin: 0vh 0vw;
+
+  /* background-image: url('https://unsplash.it/600/600'); */
+  background-size: cover;
+  padding-bottom: 0px;
+
+  background-color: rgb(238, 238, 238);
+  background-position: center;
+  /* background-size: cover; */
+
+  animation: image 3s ease-in-out infinite alternate;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  padding-bottom: 80px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes image {
+  0% {
+    background-image: url("../images/utils/about.jpg");
+  }
+  50% {
+    background-image: url("../images/utils/about.jpg");
+  }
+  100% {
+    background-image: url("../images/utils/about.jpg");
+  }
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 2rem 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .pageTitle {
+    
+    font-size: xx-large;
+    
+  }
+  .tickerv-wrap ul div li span {
+    display: none;
+  }
+  .font-change1 {
+    font-size: "10px";
+  }
+  .tickerv-wrap ul div li {
+    font-size: "10px";
+    /* padding: 18px; */
+  }
+  .tickerv-wrap {
+    /* padding: 18px; */
+  }
+}

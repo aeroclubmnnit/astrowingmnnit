@@ -1,0 +1,32 @@
+.sponsor-home img{
+  height: auto;
+  width: 100%;
+}
+
+.starbg {
+  background: url("../images/utils/space4.jpg");
+  background-size:contain;
+  background-position:center center;
+}
+
+
+.owl-carousel .owl-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-home .item .card{
+  margin: auto;
+}
+
+.spodes{
+    background: transparent;
+}
+
+.sizelogo{
+    width:50%
+}
+/* .owl-item{
+    margin-right: 0;
+} */

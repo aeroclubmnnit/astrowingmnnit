@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,100,900");
+
+ 
+.overlaye {
+  width: 100%;
+  height: auto;
+  clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  padding-bottom: 80px;
+  color: white;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.ulprosang{
+  list-style-type:circle;
+  padding-inline-start: 15px;
+}
+
+.pagese {
+  height: auto;
+  width: 100%;
+  margin: 0vh 0vw;
+  clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+
+  background-image: url('https://unsplash.it/600/600');
+  background-size: cover;
+  padding-bottom: 0px;
+
+  background-color: #eee;
+  background-position: center;
+  animation: image 3s ease-in-out infinite alternate;
+}
+
+.collapsews{
+  
+  align-items: center;
+  width:fit-content;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+/* .card_image{
+ max-height: 16rem;
+ max-width: 25rem;
+} */
+
+.dropworkshop{
+  border: 2px solid rgb(204, 67, 67);
+  border-radius: 5px;
+  margin: auto;
+  align-items: center;
+}
+
+.yearevent{
+  padding: 2em;
+}
+
+/* .bgBox{
+  background: linear-gradient(
+    20deg,
+    
+    rgb(18, 27, 68) 0%,
+    rgb(133, 162, 255) 15%,
+    rgb(255, 255, 255) 70%
+    
+  );
+} */
+
+.workshop_card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+/* #workshop .card .row object {
+  background-color: #f8f9fa;
+  width: auto;
+  min-height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  opacity: 0.2;
+} */
+
+#workshop .card .row img {
+  background-color: #f8f9fa;
+  width: auto;
+  min-height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+#workshop .d-flex h3 {
+  text-align: center;
+  color: #16324f;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  word-spacing: 0.4em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#workshop .card .row .card-body .object {
+  color: #e65658;
+  font-weight: 600;
+  margin-top: -4px;
+  line-height: 1.2em;
+  font-size: 17px;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+#workshop .card .row .card-body .value {
+  text-align: justify;
+}
+
+<<<<<<< HEAD
+/* ul {
+=======
+.remul {
+>>>>>>> 85abdc50b3c3a3567310df26007aceb7fe68c2d1
+  list-style-type: none;
+  padding-inline-start: 0;
+} */
+
+.titleBolde {
+  font-weight: 600;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.pageTitlee {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 45px;
+  text-align: center;
+  padding-top: 2em;
+}
+
+/* section {
+  height: 100%;
+  padding: 2em 0;
+} */
+
+.section1 {
+  /* background-color: rgb(204, 67, 67); */
+  clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+  /* padding-bottom: 10%; */
+  padding-top: 0;
+}
+
+.section2 {
+}
+
+.containere {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.titlee {
+  text-align: center;
+  font-size: 2em;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.img-wrapper {
+  width: 50%;
+}
+
+.imgev{
+  width: 300px;
+  height: auto;
+  /* background: #fff; */
+  margin: 0 auto;
+}
+
+.text-wrapper{
+  width: 70%;
+}
+
+.texte {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+.text {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.btn-wrapper {
+  margin-top: 2em;
+}
+
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.colarea{
+  background: linear-gradient(
+    0deg,
+    rgb(223, 228, 248) 0%,
+    rgb(227, 239, 253) 30%,
+    rgb(255, 255, 255) 70%
+    
+  );
+  /* padding-bottom:2em ; */
+}
+
+.container-f {
+  display: table-cell;
+  /* padding: 2em; */
+  padding-bottom: 2em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+h1.heading {
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 900;
+  margin: 0 0 0.5em;
+  color: #505050;
+}
+@media (min-width: 450px) {
+  h1.heading {
+    font-size: 3.55em;
+  }
+}
+@media (min-width: 760px) {
+  h1.heading {
+    font-size: 3.05em;
+  }
+}
+@media (min-width: 900px) {
+  h1.heading {
+    font-size: 3.25em;
+    margin: 0 0 0.3em;
+  }
+} 
+.cardev {
+  display: block; 
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+    transition: box-shadow .25s; 
+    border-radius: 8px;
+}
+.cardev:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.img-card {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+.img-card img{
+  width: 100%;
+  height: 200px;
+  object-fit:cover; 
+  transition: all .25s ease;
+} 
+.cardev-content {
+  padding:15px;
+  text-align:left;
+}
+.cardev-title {
+  margin-top:0px;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+.cardev-title a {
+  color: rgb(204, 67, 67);
+  text-decoration: none !important;
+}
+.card-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+.card-read-more a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
+
+@media screen and (max-width:1000px) 
+{
+    .phonetxt{
+      font-size: smaller;
+    }
+    .text-wrapper{
+      display: none;
+    }    
+    .text-desktop{
+      display: none;
+    }    
+    .detailsph {
+      font-size: 13px;
+    }
+    .phonev{
+      padding-bottom:10%;
+    }
+    .img-wrapper {
+      width: 50%;
+    }
+    
+    .imgev{
+      width: 100%;
+      height: auto;
+      /* background: #fff; */
+      margin: 0 auto;
+    }  
+
+    #workshop .card .row .card-body .card-title {
+      font-family: 'Righteous';
+      font-weight: lighter;
+      text-align: center;
+    }
+}
+
+@media screen and (min-width:1000px) 
+{
+    .phonev{
+      display: none;
+    }    
+}
