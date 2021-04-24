@@ -47,7 +47,7 @@ export default function Achievements() {
                 icon={<EmojiEvents />}
               >
                 <div className='my-4'>
-                  <div className="vertical-timeline-element-title achievement-title text-center" dangerouslySetInnerHTML={{
+                  <div className="vertical-timeline-element-title achievement-title text-center ql-editor" dangerouslySetInnerHTML={{
                     __html: achievement.desc,
                   }}></div>
                   <div className='text-center achievement-member'>

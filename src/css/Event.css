@@ -47,7 +47,9 @@
 } */
 
 .dropworkshop{
-  border: 2px solid rgb(204, 67, 67);
+  font-family: "Raleway";
+  font-weight: bold;
+  border: 2px solid rgb(22, 101, 151);
   border-radius: 5px;
   margin: auto;
   align-items: center;
@@ -128,14 +130,10 @@
   text-align: justify;
 }
 
-<<<<<<< HEAD
-/* ul {
-=======
 .remul {
->>>>>>> 85abdc50b3c3a3567310df26007aceb7fe68c2d1
   list-style-type: none;
   padding-inline-start: 0;
-} */
+} 
 
 .titleBolde {
   font-weight: 600;
@@ -161,8 +159,6 @@
   padding-top: 0;
 }
 
-.section2 {
-}
 
 .containere {
   width: 80%;

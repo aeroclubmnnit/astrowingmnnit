@@ -157,6 +157,13 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .pageTitlea {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 1.7em;
+}
   .topic {
     font-size: 16px;
   }

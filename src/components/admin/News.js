@@ -19,8 +19,7 @@ import {
     TextField,
     TextInput,
 } from "react-admin";
-
-import RichTextInput from "ra-input-rich-text";
+import RichTextQuill from "./RichTextQuill";
 
 export const NewsList = (props) => {
     return (
@@ -42,22 +41,10 @@ export const NewsCreate = (props) => {
     return (
         <Create {...props}>
             <SimpleForm redirect="/news">
-                <TextInput source="title" label="Title" />
-                <RichTextInput source="body" label="Body"
-                    toolbar={[['bold', 'italic', 'underline', 'strike'],
-                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-                    [{ 'size': ['small', false, 'large', 'huge'] }],
-                    [{ 'font': [] }],
-                    [{ 'color': [] }, { 'background': [] }],
-                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-                    [{ 'script': 'sub' }, { 'script': 'super' }],
-                    ['blockquote', 'code-block'],
-                    [{ 'indent': '-1' }, { 'indent': '+1' }],
-                    [{ 'direction': 'rtl' }],
-                    [{ 'align': [] }],
-                    ['image'],
-                    ['clean']]} />
+                <TextInput source="title" label="Title" validate={required()} />
+                <RichTextQuill source="body" label="Body" />
                 <DateInput
+                    validate={required()}
                     source="publishedAt"
                     label="Published At"
                     defaultValue={new Date()}
@@ -87,21 +74,7 @@ export const NewsEdit = (props) => {
             <SimpleForm redirect="/news">
                 <TextInput disabled label="Id" source="id" />
                 <TextInput source="title" validate={required()} label="Title" />
-                <RichTextInput source="body" label="Body" validate={required()}
-                    toolbar={[['bold', 'italic', 'underline', 'strike'],
-                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-                    [{ 'size': ['small', false, 'large', 'huge'] }],
-                    [{ 'font': [] }],
-                    [{ 'color': [] }, { 'background': [] }],
-                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-                    [{ 'script': 'sub' }, { 'script': 'super' }],
-                    ['blockquote', 'code-block'],
-                    [{ 'indent': '-1' }, { 'indent': '+1' }],
-                    [{ 'direction': 'rtl' }],
-                    [{ 'align': [] }],
-                    ['link', 'image', 'video'],
-                    ['clean']]}
-                />
+                <RichTextQuill source="body" label="Body" />
                 <BooleanInput source="private" />
                 <DateInput
                     source="publishedAt"

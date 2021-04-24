@@ -74,7 +74,7 @@ function SingleProject() {
           <div className='my-5'>
             <h3 className='mb-4 subheaders'>Overview</h3>
             <p
-              className="px-5"
+              className="px-5 ql-editor"
               dangerouslySetInnerHTML={{ __html: project?.overview }}
             ></p>
           </div>
@@ -128,7 +128,7 @@ function SingleProject() {
               <div >
                 <h3 className='my-3 subheaders'>Description</h3>
                 <p
-                  className="px-3"
+                  className="px-3 ql-editor"
                   dangerouslySetInnerHTML={{ __html: project?.description }}
                 ></p>
               </div>

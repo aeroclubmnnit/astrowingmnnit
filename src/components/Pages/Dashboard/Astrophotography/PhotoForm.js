@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { REACT_APP_SERVER } from "../../../../grobalVars";
 import { CloseRounded } from "@material-ui/icons";
 import { toast } from "react-toastify";
+import { v4 } from "uuid";
+import DashQuill from "../DashQuill";
 
 export default function PhotoForm() {
   const [formData, setformData] = useState({
@@ -125,42 +127,9 @@ export default function PhotoForm() {
             />
           </div>
           <label htmlFor="description">Description *</label>
-          <ReactQuill
-            className="mb-3"
-            id="description"
-            modules={{
-              toolbar: [
-                ["bold", "italic", "underline", "strike"],
-                [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                [{ size: ["small", false, "large", "huge"] }],
-                [{ font: [] }],
-                [{ color: [] }, { background: [] }],
-                [{ list: "ordered" }, { list: "bullet" }],
-                [{ script: "sub" }, { script: "super" }],
-                ["blockquote", "code-block"],
-                [{ indent: "-1" }, { indent: "+1" }],
-                [{ direction: "rtl" }],
-                [{ align: [] }],
-                ["link", "image", "video"],
-                ["clean"],
-              ],
-              imageResize: {
-                displayStyles: {
-                  backgroundColor: "black",
-                  border: "none",
-                  color: "white",
-                },
-                modules: ["Resize", "DisplaySize", "Toolbar"],
-              },
-            }}
-            value={formData.desc}
-            onChange={(e) => {
-              setformData((prev) => ({
-                ...prev,
-                desc: e,
-              }));
-            }}
-          />
+          <DashQuill text={formData.desc} id={v4()} setText={txt => setformData(prev => ({
+            ...prev, desc: txt
+          }))} />
           <div className="form-floating mb-3">
             <label htmlFor="instrumentsUsed">Instrument Used *</label>
             <input

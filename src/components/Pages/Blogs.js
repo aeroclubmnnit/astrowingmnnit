@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, OverlayTrigger, Tooltip } from "react-bootstrap";
 import Loading from "../../Animations/Loading";
+import "react-quill/dist/quill.snow.css";
 import "../../css/featured-proj.css";
 import { REACT_APP_BASE_TITLE, REACT_APP_SERVER } from "../../grobalVars"
 

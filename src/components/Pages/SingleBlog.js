@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import "../../css/SingleBlog.css";
 import Loading from "../../Animations/Loading";
+import "react-quill/dist/quill.core.css";
 import { Container, Jumbotron, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { REACT_APP_BASE_TITLE, REACT_APP_SERVER } from "../../grobalVars"
 
@@ -109,7 +110,7 @@ function SingleBlog() {
               <hr />
             </>
           }
-          <div dangerouslySetInnerHTML={{ __html: blog?.body }} className='my-5'></div>
+          <div dangerouslySetInnerHTML={{ __html: blog?.body }} className='my-5 ql-editor'></div>
           <hr />
         </Container>
       </Jumbotron>

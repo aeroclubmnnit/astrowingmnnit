@@ -89,7 +89,7 @@ export default function Prosang() {
                                 </h2>
                                 <div className="bgBox"
                                     style={{
-                                        border: "3px solid rgb(204, 67, 67)",
+                                        border: "3px solid rgb(22, 101, 151)",
                                         padding: "2px",
                                         borderRadius: "8px",
                                         margin: "2em",
@@ -143,7 +143,7 @@ Students of our clubs and outside display projects built throughout the year to 
                                 </h2>
                                 <div className="bgBox"
                                     style={{
-                                        border: "3px solid rgb(204, 67, 67)",
+                                        border: "3px solid rgb(22, 101, 151)",
                                         padding: "2px",
                                         borderRadius: "8px",
                                         margin: "2em",
@@ -247,7 +247,7 @@ Students of our clubs and outside display projects built throughout the year to 
                                             <div>
                                                 <p>
 
-                                                    <button className="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                    <button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                                                         Workshops
                                                      </button>
                                                 </p>

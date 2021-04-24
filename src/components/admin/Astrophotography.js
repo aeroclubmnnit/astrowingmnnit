@@ -28,10 +28,7 @@ import {
   ChipField,
   SingleFieldList,
 } from "react-admin";
-
-import RichTextInput from "ra-input-rich-text";
-import ImageResize from "quill-image-resize";
-import TextArrayField from "./TextArrayField";
+import RichTextQuill from "./RichTextQuill";
 
 export const PhotoList = (props) => {
   return (
@@ -102,36 +99,7 @@ export const PhotoCreate = (props) => {
           validate={required()}
         />
         <TextInput source="title" validate={required()} label="Title" />
-        <RichTextInput
-          source="desc"
-          validate={required()}
-          label="Description"
-          modules={{
-            imageResize: {
-              displaySize: true,
-            },
-          }}
-          options={{
-            modules: {
-              imageResize: ImageResize,
-              toolbar: [
-                ["bold", "italic", "underline", "strike"],
-                [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                [{ size: ["small", false, "large", "huge"] }],
-                [{ font: [] }],
-                [{ color: [] }, { background: [] }],
-                [{ list: "ordered" }, { list: "bullet" }],
-                [{ script: "sub" }, { script: "super" }],
-                ["blockquote", "code-block"],
-                [{ indent: "-1" }, { indent: "+1" }],
-                [{ direction: "rtl" }],
-                [{ align: [] }],
-                ["link", "image", "video"],
-                ["clean"],
-              ],
-            },
-          }}
-        />
+        <RichTextQuill source="desc" label="Description" />
         <TextInput source="pic" label="Image Link" validate={required()} />
         <ArrayInput source="members">
           <SimpleFormIterator>
@@ -163,36 +131,7 @@ export const PhotoEdit = (props) => {
         <TextInput source="instrumentUsed" label="instrument Used" />
         <TextInput source="instrumentSettings" label="Instrument Settings" />
         <TextInput source="title" validate={required()} label="Title" />
-        <RichTextInput
-          source="desc"
-          validate={required()}
-          label="Description"
-          modules={{
-            imageResize: {
-              displaySize: true,
-            },
-          }}
-          options={{
-            modules: {
-              imageResize: ImageResize,
-              toolbar: [
-                ["bold", "italic", "underline", "strike"],
-                [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                [{ size: ["small", false, "large", "huge"] }],
-                [{ font: [] }],
-                [{ color: [] }, { background: [] }],
-                [{ list: "ordered" }, { list: "bullet" }],
-                [{ script: "sub" }, { script: "super" }],
-                ["blockquote", "code-block"],
-                [{ indent: "-1" }, { indent: "+1" }],
-                [{ direction: "rtl" }],
-                [{ align: [] }],
-                ["link", "image", "video"],
-                ["clean"],
-              ],
-            },
-          }}
-        />
+        <RichTextQuill source="desc" label="Description" />
         <TextInput source="pic" label="Image Link" validate={required()} />
         <ArrayInput source="members">
           <SimpleFormIterator>

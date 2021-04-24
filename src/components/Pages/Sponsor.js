@@ -113,7 +113,7 @@ Also, many people consider astronomy as a hobby, which helps them genuinely have
                   <p className="just">Also, being in an engineering college, <b>any form of academic / industrial mentorship</b> will help our curious individuals continue their passion for sciences and make something genuinely innovative when blended with their engineering expertise. If you choose to sponsor us, <b>we'll promote you</b> from all our social media accounts and our website's homepage too; this holds true regardless of whether you're an alumnus, individual or a company.
 
                   </p>
-                  <p className="just"><b>If you resonate with our cause and want to help us in any form, contact us at</b> aeroclub@mnnit.ac.in
+                  <p className="just"><b>If you resonate with our cause and want to help us in any form, contact us at : </b> <i><a href="https://aeroclubmnnit.tk/" style={{textDecoration:"none", color:"red", fontWeight:"bold"}}>AEROCLUB MNNIT</a></i>
 
                   </p>
 

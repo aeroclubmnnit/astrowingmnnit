@@ -124,3 +124,16 @@
         height: 16rem;
     }
 }
+
+
+
+.backst{
+    
+    font-weight:500;
+    background: url(https://media.giphy.com/media/3o7buijTqhjxjbEqjK/giphy.gif) center center;
+    background-size: cover;
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 0;
+}

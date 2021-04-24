@@ -77,7 +77,7 @@ export default function Avishkar() {
                                 </h2>
                                 <div className="bgBox phonev"
                                     style={{
-                                        border: "3px solid rgb(204, 67, 67)",
+                                        border: "3px solid rgb(22, 101, 151)",
                                         padding: "2px",
                                         borderRadius: "8px",
                                         margin: "2em",
@@ -99,7 +99,7 @@ export default function Avishkar() {
 
                     <div className="bgBox"
                         style={{
-                            border: "3px solid rgb(204, 67, 67)",
+                            border: "3px solid rgb(22, 101, 151)",
                             padding: "2px",
                             borderRadius: "8px",
                             margin: "2em",

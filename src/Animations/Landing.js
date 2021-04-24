@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Landing.css";
-import m from "../images/utils/astro_logo2.png";
+import m from "../images/utils/astro_logo5.png";
 
 class Landing extends React.Component {
   render() {

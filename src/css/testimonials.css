@@ -210,12 +210,15 @@
   padding: 20px;
   position: relative;
   text-align: center;
-  background-color:#2766a9;
+  
+/* background: linear-gradient(90deg, rgb(45, 78, 128) 0%, #011320 100%); */
+  background-color:#1c3550;
   border-radius: 20px;
 }
 .testimonial4_slide:after {
     content:'';
-    background-color: #2766a9;
+    background: rgb(2,0,36);
+    /* background-color: #2766a9; */
     box-shadow: 0 4px 8px 0 rgba(29, 29, 29, 0.7), 0 6px 20px 0 rgba(26, 26, 26, 0.6);
     background-size: cover;
     position: absolute;
@@ -229,7 +232,7 @@
 }
 
 .colchange{
-  color: #0e1354;
+  color: #00e1ff;
 }
 .testimonial4_slide img {
     top: 0;

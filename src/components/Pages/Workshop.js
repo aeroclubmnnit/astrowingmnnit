@@ -85,7 +85,7 @@ export default function Workshop() {
               </h2>
               <div className="bgBox phonev"
                 style={{
-                  border: "3px solid rgb(204, 67, 67)",
+                  border: "3px solid rgb(22, 101, 151)",
                   padding: "2px",
                   borderRadius: "8px",
                   margin: "2em",
@@ -127,10 +127,10 @@ export default function Workshop() {
                     <br />
                     {/* for date */}
                     <span className="object">Target Audience : </span>
-                    <span className="value" dangerouslySetInnerHTML={{ __html: singleNews.target }}></span><br />
+                    <span className="value">{singleNews.target}</span><br />
                     {/* <span className="object">Description :</span> */}
-                    <span className="value" dangerouslySetInnerHTML={{ __html: singleNews.description }}></span>
-                    <div className="value" dangerouslySetInnerHTML={{ __html: singleNews.about }}></div>
+                    <span className="value ql-editor" dangerouslySetInnerHTML={{ __html: singleNews.description }}></span>
+                    <div className="value singleNews.target" dangerouslySetInnerHTML={{ __html: singleNews.about }}></div>
                     {/* <div className="object">
                       <em
                         style={{ fontSize: "small" }}

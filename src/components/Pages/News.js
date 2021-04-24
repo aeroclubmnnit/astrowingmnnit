@@ -63,7 +63,7 @@ export default function News() {
                       ).toLocaleDateString()}
                       </em>
                     </div>
-                    <div className="panel-body my-5 mx-4" dangerouslySetInnerHTML={{ __html: singleNews.body }}></div>
+                    <div className="panel-body my-5 mx-4 ql-editor" dangerouslySetInnerHTML={{ __html: singleNews.body }}></div>
                   </div>
                 </div>
               ))}

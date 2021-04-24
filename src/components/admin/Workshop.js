@@ -18,12 +18,8 @@ import {
     TextInput,
     UrlField,
     ImageField,
-
-
 } from "react-admin";
-
-import RichTextInput from "ra-input-rich-text";
-import ImageResize from 'quill-image-resize'
+import RichTextQuill from "./RichTextQuill";
 
 export const WorkshopList = (props) => {
     return (
@@ -44,53 +40,17 @@ export const WorkshopCreate = (props) => {
     return (
         <Create {...props}>
             <SimpleForm redirect="/workshop">
-                <TextInput source="name" label="Name" />
-                <TextInput source="target" label="Target Audience" />
-
-                <RichTextInput
-                    source="description"
-                    label="Description"
-                    options={{
-                        modules: {
-                            "imageResize": ImageResize,
-                            toolbar: [
-                                ["bold", "italic", "underline", "strike"],
-                                [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                                [{ size: ["small", false, "large", "huge"] }],
-                                [{ font: [] }],
-                                [{ color: [] }, { background: [] }],
-                                [{ list: "ordered" }, { list: "bullet" }],
-                                [{ script: "sub" }, { script: "super" }],
-                                ["blockquote", "code-block"],
-                                [{ indent: "-1" }, { indent: "+1" }],
-                                [{ direction: "rtl" }],
-                                [{ align: [] }],
-                                ["link", "image", "video"],
-                                ["clean"],
-                            ]
-                        },
-                    }}
-                />
+                <TextInput source="name" label="Name" validate={required()} />
+                <TextInput source="target" label="Target Audience" validate={required()} />
+                <RichTextQuill source="description" label="Description" />
                 <TextInput source="pic" label="Image Link ( Optional )" />
-                <TextInput source="brochure" label="Brochure Link" />
-                <RichTextInput source="about" label="About"
-                    toolbar={[['bold', 'italic', 'underline', 'strike'],
-                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-                    [{ 'size': ['small', false, 'large', 'huge'] }],
-                    [{ 'font': [] }],
-                    [{ 'color': [] }, { 'background': [] }],
-                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-                    [{ 'script': 'sub' }, { 'script': 'super' }],
-                    ['blockquote', 'code-block'],
-                    [{ 'indent': '-1' }, { 'indent': '+1' }],
-                    [{ 'direction': 'rtl' }],
-                    [{ 'align': [] }],
-                    ['image'],
-                    ['clean']]} />
+                <TextInput source="brochure" label="Brochure Link" validate={required()} />
+                <RichTextQuill source="about" label="About" />
                 <DateInput
                     source="date"
                     label="Date"
                     defaultValue={new Date()}
+                    validate={required()}
                 />
             </SimpleForm>
         </Create>
@@ -120,53 +80,10 @@ export const WorkshopEdit = (props) => {
                 <TextInput disabled label="Id" source="id" />
                 <TextInput source="name" validate={required()} label="Name" />
                 <TextInput source="target" validate={required()} label="Target Audience" />
-                <RichTextInput
-                    source="description"
-                    validate={required()}
-                    label="Description"
-                    modules={{
-                        imageResize: {
-                            displaySize: true,
-                        },
-                    }}
-                    options={{
-                        modules: {
-                            "imageResize": ImageResize,
-                            toolbar: [
-                                ["bold", "italic", "underline", "strike"],
-                                [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                                [{ size: ["small", false, "large", "huge"] }],
-                                [{ font: [] }],
-                                [{ color: [] }, { background: [] }],
-                                [{ list: "ordered" }, { list: "bullet" }],
-                                [{ script: "sub" }, { script: "super" }],
-                                ["blockquote", "code-block"],
-                                [{ indent: "-1" }, { indent: "+1" }],
-                                [{ direction: "rtl" }],
-                                [{ align: [] }],
-                                ["link", "image", "video"],
-                                ["clean"],
-                            ]
-                        },
-                    }}
-                />
+                <RichTextQuill source="description" label="Description" />
                 <TextInput source="pic" label="Image Link ( Optional ) " />
                 <TextInput source="brochure" validate={required()} label="brochure link" />
-                <RichTextInput source="about" label="About" validate={required()}
-                    toolbar={[['bold', 'italic', 'underline', 'strike'],
-                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-                    [{ 'size': ['small', false, 'large', 'huge'] }],
-                    [{ 'font': [] }],
-                    [{ 'color': [] }, { 'background': [] }],
-                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-                    [{ 'script': 'sub' }, { 'script': 'super' }],
-                    ['blockquote', 'code-block'],
-                    [{ 'indent': '-1' }, { 'indent': '+1' }],
-                    [{ 'direction': 'rtl' }],
-                    [{ 'align': [] }],
-                    ['link', 'image', 'video'],
-                    ['clean']]}
-                />
+                <RichTextQuill source="about" label="About" />
                 <DateInput
                     source="date"
                     label="Date"

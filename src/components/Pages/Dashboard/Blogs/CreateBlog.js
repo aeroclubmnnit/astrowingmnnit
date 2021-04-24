@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import ReactQuill, { Quill } from "react-quill";
-import ImageResize from "quill-image-resize";
-import "react-quill/dist/quill.snow.css";
 import "../../../../css/CreateBlog.css";
 import "../../../../css/SingleBlog.css";
 import { REACT_APP_SERVER } from "../../../../grobalVars"
 import { Button, Container, Jumbotron, OverlayTrigger, Tab, Tabs, Tooltip } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
-Quill.register("modules/imageResize", ImageResize);
+import DashQuill from "../DashQuill";
+import { v4 } from 'uuid'
 
 export default function CreateBlog() {
   const user = useSelector(state => state.user)
@@ -75,7 +73,7 @@ export default function CreateBlog() {
   };
 
   return (
-    <div>
+    <div className='container-fluid mb-5'>
       <div className="d-flex justify-content-center align-items-center mt-5">
         <button className="btn btn-primary px-4 btn-lg"
           type="button"
@@ -86,7 +84,7 @@ export default function CreateBlog() {
           Create Blog
         </button>
       </div>
-      <div className="blog collapse" id='collapsecreateblog'>
+      <div className="blog container-fluid collapse" id='collapsecreateblog'>
         <div className="mt-4 mx-2">
           <Tabs defaultActiveKey="create" id="uncontrolled-tab-example">
             <Tab eventKey="create" title="Layout">
@@ -113,36 +111,7 @@ export default function CreateBlog() {
                     onChange={(e) => setPic(e.target.value)}
                   />
                 </div>
-                <ReactQuill
-                  className="mb-3"
-                  modules={{
-                    toolbar: [
-                      ["bold", "italic", "underline", "strike"],
-                      [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                      [{ size: ["small", false, "large", "huge"] }],
-                      [{ font: [] }],
-                      [{ color: [] }, { background: [] }],
-                      [{ list: "ordered" }, { list: "bullet" }],
-                      [{ script: "sub" }, { script: "super" }],
-                      ["blockquote", "code-block"],
-                      [{ indent: "-1" }, { indent: "+1" }],
-                      [{ direction: "rtl" }],
-                      [{ align: [] }],
-                      ["link", "image", "video"],
-                      ["clean"],
-                    ],
-                    imageResize: {
-                      displayStyles: {
-                        backgroundColor: "black",
-                        border: "none",
-                        color: "white",
-                      },
-                      modules: ["Resize", "DisplaySize", "Toolbar"],
-                    },
-                  }}
-                  value={body}
-                  onChange={setBody}
-                />
+                <DashQuill text={body} setText={setBody} id={v4()} />
               </div>
               <div className="d-flex justify-content-center align-items-center">
                 <Button
@@ -163,7 +132,7 @@ export default function CreateBlog() {
                     background: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,.4))`,
                   }}
                 >
-                  <div className="overlayp">
+                  <div className="overlayp starbg">
                     <div className="pageTitlep titleBoldp container col-11 pl-0">
                       <div className='blog-title'>
                         {title}
@@ -221,7 +190,7 @@ export default function CreateBlog() {
                         <hr />
                       </>
                     }
-                    <div dangerouslySetInnerHTML={{ __html: body }} className='my-5'></div>
+                    <div dangerouslySetInnerHTML={{ __html: body }} className='my-5 ql-editor'></div>
                     <hr />
                   </Container>
                 </Jumbotron>

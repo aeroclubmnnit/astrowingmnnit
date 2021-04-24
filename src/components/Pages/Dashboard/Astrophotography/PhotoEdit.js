@@ -1,25 +1,29 @@
 import React, { useEffect, useState } from "react";
-import ReactQuill from "react-quill";
 import { useDispatch } from "react-redux";
 import { REACT_APP_SERVER } from "../../../../grobalVars";
 import { CloseRounded } from '@material-ui/icons';
 import { toast } from "react-toastify";
+import { v4 } from "uuid";
+import DashQuill from "../DashQuill";
 
 export default function PhotoEdit({ photo }) {
     const [formData, setformData] = useState({})
     const [tags, setTags] = useState([])
-    const [definedTags, setDefinedTags] = useState(['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Moon', 'Deep sky objects', 'Sun', 'Star Trails', 'Constellation', 'Nebulae', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
+    const [definedTags, setDefinedTags] = useState([])
+    const [loading, setLoading] = useState(false);
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        setformData(photo)
-        setTags(photo.tags)
-        setDefinedTags(prev => prev.filter(item => !photo.tags.includes(item)))
-        console.log(photo)
+        fetch(`${REACT_APP_SERVER}/api/tags`, { method: "GET" })
+            .then((res) => res.json())
+            .then((data) => {
+                setDefinedTags(data.filter(item => !photo.tags.includes(item)))
+                setformData(photo)
+                setTags(photo.tags)
+            });
     }, [photo])
 
 
-    const [loading, setLoading] = useState(false);
-    const dispatch = useDispatch();
     return (
         <div>
             <p className="d-flex justify-content-center">
@@ -102,42 +106,9 @@ export default function PhotoEdit({ photo }) {
                         />
                     </div>
                     <label htmlFor="description">Description *</label>
-                    <ReactQuill
-                        className="mb-3"
-                        id='description'
-                        modules={{
-                            toolbar: [
-                                ["bold", "italic", "underline", "strike"],
-                                [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                                [{ size: ["small", false, "large", "huge"] }],
-                                [{ font: [] }],
-                                [{ color: [] }, { background: [] }],
-                                [{ list: "ordered" }, { list: "bullet" }],
-                                [{ script: "sub" }, { script: "super" }],
-                                ["blockquote", "code-block"],
-                                [{ indent: "-1" }, { indent: "+1" }],
-                                [{ direction: "rtl" }],
-                                [{ align: [] }],
-                                ["link", "image", "video"],
-                                ["clean"],
-                            ],
-                            imageResize: {
-                                displayStyles: {
-                                    backgroundColor: "black",
-                                    border: "none",
-                                    color: "white",
-                                },
-                                modules: ["Resize", "DisplaySize", "Toolbar"],
-                            },
-                        }}
-                        value={formData.desc}
-                        onChange={(e) => {
-                            setformData((prev) => ({
-                                ...prev,
-                                desc: e,
-                            }));
-                        }}
-                    />
+                    <DashQuill text={formData.desc} id={v4()} setText={txt => setformData(prev => ({
+                        ...prev, desc: txt
+                    }))} />
                     <div className="form-floating mb-3">
                         <label htmlFor="instrumentsUsed">Instrument Used *</label>
                         <input

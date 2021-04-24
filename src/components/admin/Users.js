@@ -39,7 +39,6 @@ export const UserList = (props) => {
         <ShowButton basePath="/users" />
         {user.role === "Super-Admin" && <EditButton basePath="/users" />}
         {user.role === "Super-Admin" && <DeleteButton basePath="/users" />}
-        <CreateButton />
       </Datagrid>
     </List>
   );

@@ -21,6 +21,7 @@ function Dashboard() {
     document.getElementsByClassName('App')[0].classList.remove('bgrt')
     document.getElementsByClassName('App')[0].style.backgroundColor = '#ffffff'
     if (!localStorage.getItem("jwtToken")) {
+      localStorage.removeItem('role')
       history.push("/user/login");
       toast.warn("You must be logged in !");
     }
@@ -34,6 +35,8 @@ function Dashboard() {
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
+          localStorage.removeItem('role')
+          localStorage.removeItem('jwtToken')
           toast.warn(data.error);
           history.push("/user/login");
           return;
@@ -126,7 +129,7 @@ function Dashboard() {
             aria-controls="nav-inventory"
             aria-selected="false"
           >
-            Component Inventory
+            Component Info
           </a>
           <a
             className="nav-item nav-link"

@@ -5,6 +5,10 @@ import Particles from "react-particles-js";
 export default function NotFound() {
   useEffect(() => {
     document.title = `404 | ${REACT_APP_BASE_TITLE}`;
+    document.getElementsByClassName('App')[0].classList.remove('bgrt')
+    return () => {
+      document.getElementsByClassName('App')[0].classList.add('bgrt')
+    }
   }, [])
 
   const particlesOptions = {

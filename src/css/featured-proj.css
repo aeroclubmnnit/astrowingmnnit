@@ -223,8 +223,8 @@ img {
 
 .card_content {
   padding: 1rem;
-  background: url("../images/utils/space4.jpg");
-  background-size:contain;
+  background: url(https://media.giphy.com/media/xUPGcH7WRAnKKWhR7y/giphy.gif) center center;
+  background-size:cover;
   background-position:center center;
   /* background: rgb(19, 19, 19); */
   /* border: 2px solid rgb(90, 194, 255); */

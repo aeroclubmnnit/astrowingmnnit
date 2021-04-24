@@ -1,6 +1,9 @@
 import Chip from '@material-ui/core/Chip'
 
 const TextArrayField = ({ record, source }) => {
+
+    console.log(record, source)
+
     const array = record[source]
     if (typeof array === 'undefined' || array === null || array.length === 0) {
         return <div />

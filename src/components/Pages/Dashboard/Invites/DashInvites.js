@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Accordion, Card, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { REACT_APP_BASE_TITLE, REACT_APP_SERVER } from "../../../../grobalVars"
+import { REACT_APP_BASE_TITLE, REACT_APP_SERVER } from "../../../../grobalVars";
 
 export default function Dashprojects(props) {
   const [projects, setProjects] = useState([]);
@@ -16,10 +16,7 @@ export default function Dashprojects(props) {
       },
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setProjects(data);
-      });
+      .then((data) => setProjects(data));
   }, []);
 
   return (
@@ -67,9 +64,18 @@ export default function Dashprojects(props) {
                                 </span>
                               );
                             } else {
-                              if (member.user._id == user?._id) {
+                              if (member.user._id == user?.id) {
                                 badge = (
-                                  <LoadingButton projectId={project._id} />
+                                  <span>
+                                    <LoadingButton
+                                      projectId={project._id}
+                                      type="accept"
+                                    />
+                                    <LoadingButton
+                                      projectId={project._id}
+                                      type="reject"
+                                    />
+                                  </span>
                                 );
                               } else
                                 badge = (
@@ -104,12 +110,13 @@ export default function Dashprojects(props) {
 }
 
 function LoadingButton(props) {
+  const type = props.type;
   const [isLoading, setLoading] = useState(false);
   const [isdone, setDone] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
     if (isLoading) {
-      fetch(`${REACT_APP_SERVER}/api/my/invites/accept/${props.projectId}`, {
+      fetch(`${REACT_APP_SERVER}/api/my/invites/${type}/${props.projectId}`, {
         method: "get",
         headers: {
           "Content-Type": "application/json",
@@ -121,7 +128,8 @@ function LoadingButton(props) {
           console.log(data);
           setLoading(false);
           setDone(true);
-          dispatch({ type: "ACCEPT_INVITE", payload: data.project });
+          if (type === "accept")
+            dispatch({ type: "ACCEPT_INVITE", payload: data.project });
         });
     }
   }, [isLoading]);
@@ -134,7 +142,7 @@ function LoadingButton(props) {
       disabled={isdone}
       onClick={!isLoading ? handleClick : null}
     >
-      {isLoading ? "Loading…" : isdone ? "Accepted" : "Accept"}
+      {isLoading ? "Loading…" : isdone ? type + "ed" : type}
     </Button>
   );
 }

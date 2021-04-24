@@ -15,8 +15,10 @@ export default function APOD() {
     return (
         <div className="cont my-5">
             <div className="container-fluid">
+            {/* <p><span> Astronomy Picture of the Day</span></p> */}
+            
                 <div
-                    className="pageTitle titleBold headingc white-headingc"
+                    className="pageTitle titleBold headingc white-headingc backst"
                     data-aos="fade-down"
                     style={{ marginBottom: "5px", color: "rgb(25, 25, 25)" }}
                 >
@@ -24,7 +26,7 @@ export default function APOD() {
         </div>
                 <div className="miniSep" style={{ marginBottom: "20px" }}></div>
                 <div className="d-flex flex-column flex-md-row container apod-container  col-11 col-lg-9 mx-auto my-5 border">
-                    <div className="information text-center mt-5 mb-2 mx-5">
+                    <div className="information text-center mt-5 mb-2">
                         <div className="title">
                             <h3>{data?.title}</h3>
                         </div>

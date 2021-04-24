@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./css/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-quill/dist/quill.core.css";
+import "react-quill/dist/quill.snow.css";
 import App from "./App.js";
 import ConfigureStore, { history } from "./ConfigureStore";
 import { PersistGate } from 'redux-persist/integration/react'

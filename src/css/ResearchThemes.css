@@ -39,3 +39,17 @@
     list-style-type:circle !important;
     padding-inline-start: 10px;
   }
+
+  .blockcol{
+    /* background: red; */
+    padding:20px;
+  
+  
+    background-image: linear-gradient(to left,transparent, transparent 50%,rgb(45, 78, 128) 50%, #011320);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .5s ease-in;
+  }
+  
+  .blockcol:hover{ background-position: 0 0;
+  }

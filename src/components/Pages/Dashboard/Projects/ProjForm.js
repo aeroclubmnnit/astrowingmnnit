@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
 import { useDispatch } from "react-redux";
 import { REACT_APP_SERVER } from "../../../../grobalVars";
 import { AddCircleOutline, RemoveCircleOutline } from "@material-ui/icons";
 import { toast } from "react-toastify";
+import DashQuill from "../DashQuill";
+import { v4 } from "uuid";
 
 export default function ProjForm() {
   const [formData, setformData] = useState({
@@ -122,79 +123,13 @@ export default function ProjForm() {
             />
           </div>
           <label htmlFor="overview">Overview *</label>
-          <ReactQuill
-            className="mb-3"
-            id="overview"
-            modules={{
-              toolbar: [
-                ["bold", "italic", "underline", "strike"],
-                [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                [{ size: ["small", false, "large", "huge"] }],
-                [{ font: [] }],
-                [{ color: [] }, { background: [] }],
-                [{ list: "ordered" }, { list: "bullet" }],
-                [{ script: "sub" }, { script: "super" }],
-                ["blockquote", "code-block"],
-                [{ indent: "-1" }, { indent: "+1" }],
-                [{ direction: "rtl" }],
-                [{ align: [] }],
-                ["link", "image", "video"],
-                ["clean"],
-              ],
-              imageResize: {
-                displayStyles: {
-                  backgroundColor: "black",
-                  border: "none",
-                  color: "white",
-                },
-                modules: ["Resize", "DisplaySize", "Toolbar"],
-              },
-            }}
-            value={formData.overview}
-            onChange={(e) => {
-              setformData((prev) => ({
-                ...prev,
-                overview: e,
-              }));
-            }}
-          />
+          <DashQuill text={formData.overview} id={v4()} setText={txt => setformData(prev => ({
+            ...prev, overview: txt
+          }))} />
           <label htmlFor="description">Description *</label>
-          <ReactQuill
-            className="mb-3"
-            id="description"
-            modules={{
-              toolbar: [
-                ["bold", "italic", "underline", "strike"],
-                [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                [{ size: ["small", false, "large", "huge"] }],
-                [{ font: [] }],
-                [{ color: [] }, { background: [] }],
-                [{ list: "ordered" }, { list: "bullet" }],
-                [{ script: "sub" }, { script: "super" }],
-                ["blockquote", "code-block"],
-                [{ indent: "-1" }, { indent: "+1" }],
-                [{ direction: "rtl" }],
-                [{ align: [] }],
-                ["link", "image", "video"],
-                ["clean"],
-              ],
-              imageResize: {
-                displayStyles: {
-                  backgroundColor: "black",
-                  border: "none",
-                  color: "white",
-                },
-                modules: ["Resize", "DisplaySize", "Toolbar"],
-              },
-            }}
-            value={formData.description}
-            onChange={(e) => {
-              setformData((prev) => ({
-                ...prev,
-                description: e,
-              }));
-            }}
-          />
+          <DashQuill text={formData.description} id={v4()} setText={txt => setformData(prev => ({
+            ...prev, description: txt
+          }))} />
           <div className="form-floating mb-3">
             <label htmlFor="image">Image Link</label>
 
@@ -202,7 +137,6 @@ export default function ProjForm() {
               type="url"
               className="form-control"
               id="image"
-              required
               value={formData.pic}
               onChange={(e) => {
                 setformData((prev) => ({
@@ -221,7 +155,6 @@ export default function ProjForm() {
               type="text"
               className="form-control"
               id="embed"
-              required
               value={formData.ytID}
               onChange={(e) => {
                 setformData((prev) => ({
@@ -239,7 +172,6 @@ export default function ProjForm() {
                   type="text"
                   className="form-control my-2 mr-2"
                   id={`ct${i}`}
-                  required
                   value={ct}
                   onChange={(e) => {
                     setCompTech(

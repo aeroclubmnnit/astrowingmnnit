@@ -16,12 +16,11 @@ import {
   Show,
   SimpleShowLayout,
   ArrayField,
-  NumberInput,
   NumberField,
   RichTextField,
 } from "react-admin";
 
-import RichTextInput from "ra-input-rich-text";
+import RichTextQuill from "./RichTextQuill";
 
 export const AchievementList = (props) => {
   return (
@@ -41,25 +40,7 @@ export const AchievementCreate = (props) => {
   return (
     <Create {...props}>
       <SimpleForm redirect="/achievement">
-        <RichTextInput
-          source="desc"
-          label="Description"
-          toolbar={[
-            ["bold", "italic", "underline", "strike"],
-            [{ header: [1, 2, 3, 4, 5, 6, false] }],
-            [{ size: ["small", false, "large", "huge"] }],
-            [{ font: [] }],
-            [{ color: [] }, { background: [] }],
-            [{ list: "ordered" }, { list: "bullet" }],
-            [{ script: "sub" }, { script: "super" }],
-            ["blockquote", "code-block"],
-            [{ indent: "-1" }, { indent: "+1" }],
-            [{ direction: "rtl" }],
-            [{ align: [] }],
-            ["image"],
-            ["clean"],
-          ]}
-        />
+        <RichTextQuill source="desc" label="Description" />
         <ArrayInput source="team" label="Team">
           <SimpleFormIterator>
             <TextInput source="name" label="Member Name" />
@@ -76,25 +57,7 @@ export const AchievementEdit = (props) => {
   return (
     <Edit title="Edit Project" {...props}>
       <SimpleForm redirect="/achievement">
-        <RichTextInput
-          source="desc"
-          label="Description"
-          toolbar={[
-            ["bold", "italic", "underline", "strike"],
-            [{ header: [1, 2, 3, 4, 5, 6, false] }],
-            [{ size: ["small", false, "large", "huge"] }],
-            [{ font: [] }],
-            [{ color: [] }, { background: [] }],
-            [{ list: "ordered" }, { list: "bullet" }],
-            [{ script: "sub" }, { script: "super" }],
-            ["blockquote", "code-block"],
-            [{ indent: "-1" }, { indent: "+1" }],
-            [{ direction: "rtl" }],
-            [{ align: [] }],
-            ["image"],
-            ["clean"],
-          ]}
-        />
+        <RichTextQuill source="desc" label="Description" />
         <ArrayInput source="team" label="Team">
           <SimpleFormIterator>
             <TextInput source="name" label="Member Name" />
