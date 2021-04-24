@@ -13,7 +13,6 @@
     "popper.js": "^1.16.1",
     "quill-image-resize": "^3.0.9",
     "ra-data-simple-rest": "^3.10.4",
-    "ra-input-rich-text": "^3.10.1",
     "react": "^17.0.1",
     "react-admin": "^3.11.3",
     "react-bootstrap": "^1.4.3",
