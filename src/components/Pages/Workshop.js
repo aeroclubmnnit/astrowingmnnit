@@ -7,7 +7,7 @@ import { REACT_APP_BASE_TITLE, REACT_APP_SERVER } from "../../grobalVars"
 
 export default function Workshop() {
   useEffect(() => {
-    document.title = `Jiygasa | ${REACT_APP_BASE_TITLE}`;
+    document.title = `Jigyasa | ${REACT_APP_BASE_TITLE}`;
   }, [])
 
   const [workshops, SetWorkshops] = useState([]);
@@ -71,7 +71,7 @@ export default function Workshop() {
         className='mb-5'
         fluid
         style={{
-          background: "white",
+          background: "#fafafa",
           width: "100%",
           margin: "auto",
           paddingBottom: "1rem",

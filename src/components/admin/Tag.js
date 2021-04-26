@@ -36,7 +36,7 @@ export const TagCreate = (props) => {
   return (
     <Create {...props}>
       <SimpleForm redirect="/tag">
-        <TextInput source="name" validate={[required()]} />
+        <TextInput source="name" validate={required()} />
       </SimpleForm>
     </Create>
   );
@@ -57,7 +57,7 @@ export const TagEdit = (props) => {
   return (
     <Edit title="Tag Edit" {...props}>
       <SimpleForm redirect="/tag">
-        <TextInput source="name" validate={[required()]} />
+        <TextInput source="name" validate={required()} />
       </SimpleForm>
     </Edit>
   );

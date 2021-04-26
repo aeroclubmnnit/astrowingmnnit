@@ -21,7 +21,7 @@ function AstrophotoGraphy() {
   }, []);
 
   const [page, SetPage] = useState(1);
-  const photos_per_page = 6;
+  const photos_per_page = 9;
   const no_of_pages = Math.ceil(photos.length / photos_per_page);
 
   const handleTagFilter = (tag) => {

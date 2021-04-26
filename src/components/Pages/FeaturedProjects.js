@@ -38,20 +38,20 @@ function FeaturedProjects() {
   }, []);
 
   const [page, SetPage] = useState(1);
-  const projects_per_page = 4;
+  const projects_per_page = 9;
   const no_of_pages = Math.ceil(projects.length / projects_per_page);
 
   return (
     <>
       <Loading time={2} />
       <div className="cont">
-      <h3 className="my-3 titleBold d-flex justify-content-center topic">
-              <p className="" style={{ marginBottom: "0px", textAlign: "center", color:"rgb(29, 29, 29)" }}>FLAGSHIP PROJECTS</p>
-            </h3>
-            <div
-              className="miniSep"
-              style={{ marginBottom: "40px", background: "rgb( 67, 67, 204)" }}
-            ></div>
+        <h3 className="my-3 titleBold d-flex justify-content-center topic">
+          <p className="" style={{ marginBottom: "0px", textAlign: "center", color: "rgb(29, 29, 29)" }}>FLAGSHIP PROJECTS</p>
+        </h3>
+        <div
+          className="miniSep"
+          style={{ marginBottom: "40px", background: "rgb( 67, 67, 204)" }}
+        ></div>
         <div
           className="main"
           style={{ overflow: "hidden", minHeight: "31.7vh" }}
@@ -65,13 +65,12 @@ function FeaturedProjects() {
                     data-aos-duration="1500">
                     <div className="card cardproj">
                       <div className="card_image">
-                        <img className="evfeatured" src={project.pic} style={{ width: '100%', maxHeight: '18rem', minHeight: '18rem' }} />
+                        <img className="evfeatured" src={project.pic || 'https://lh3.googleusercontent.com/22uNNnzS6tHVU9N-BR3zlu6S_Fg03yb5omXJtTbR7Ixcd_FRL23sNadI2G5X0tkoQAqcjzwMPf5BXDYdtCWtfxcmEN90ybDONZCzQdQiIcnrnIg9oAhrjRjiCqGwXxx8tDsk4yH89A=w2400'} style={{ width: '100%', maxHeight: '18rem', minHeight: '18rem' }} />
                       </div>
                       <div className="card_content forphone forphone1" style={{ width: '100%' }}>
                         <h2 className="card_title forphone forphone2" style={{ width: '100%' }}>{project.title}</h2>
-                        <p className="card_text forphone forphone3 mb-5" style={{ width: '100%' }}>
+                        <p className="card_text forphone forphone3" style={{ width: '100%' }}>
                           <strong>OBJECTIVE</strong> : {project.objective} <br /> <br />
-                          <strong>STATUS</strong> : {project.status}
                         </p>
                         <Button
                           className="btns card_btns"

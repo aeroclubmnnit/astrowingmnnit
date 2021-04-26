@@ -72,6 +72,9 @@ export default function Navigbar() {
             <Nav.Link eventKey="blogs" hresname="nav-items" href="/blogs">
               Blogs
             </Nav.Link>
+            <Nav.Link eventKey="astrophotography" href="/astrophotography" className="nav-items">
+              Astrophotography
+            </Nav.Link>
             <NavDropdown
               title="Events"
               id="basic-nav-dropdown"
@@ -122,9 +125,6 @@ export default function Navigbar() {
             </NavDropdown>
             <Nav.Link eventKey="collaborate" href="/collaborate" className="nav-items">
               Collaborate
-            </Nav.Link>
-            <Nav.Link eventKey="astrophotography" href="/astrophotography" className="nav-items">
-              Astrophotography
             </Nav.Link>
             <Nav.Link eventKey="sponsors" href="/sponsors" className="nav-items">
               Sponsors

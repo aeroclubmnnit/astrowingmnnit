@@ -106,7 +106,7 @@ img {
   font-size: 1rem !important;
 }
 .forphone3{
-  height: 6.7rem;
+  height: 5.9rem;
   font-size: 0.85rem !important;
 }
 
@@ -223,12 +223,20 @@ img {
 
 .card_content {
   padding: 1rem;
-  background: url(https://media.giphy.com/media/xUPGcH7WRAnKKWhR7y/giphy.gif) center center;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://media.giphy.com/media/xUPGcH7WRAnKKWhR7y/giphy.gif) center center;
   background-size:cover;
   background-position:center center;
   /* background: rgb(19, 19, 19); */
   /* border: 2px solid rgb(90, 194, 255); */
   border-radius: 0px 0px 0.5rem 0.5rem;
+}
+
+.card_content a{
+  color: white;
+}
+
+.card_content a:hover{
+  color: #5286e6;
 }
 
 .card_title {
@@ -238,6 +246,7 @@ img {
   letter-spacing: 1px;
   text-transform: capitalize;
   margin: 0px;
+  text-align: center;
 }
 
 .card_text {

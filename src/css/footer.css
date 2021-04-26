@@ -1,7 +1,7 @@
 .footer-logo img{ 
   border-radius: 1rem;
   height: 10rem;
-  width: 15rem;
+  /* width: 15rem; */
   object-fit: initial;
 }
 
@@ -105,7 +105,7 @@
 }
 
 a.hov:hover{
-  color: rgb(207, 67, 67);
+  color: rgb(82, 192, 255);
 }
 
 .social-icons

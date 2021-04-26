@@ -2,6 +2,7 @@ import React from "react";
 import { Accordion, Card, Button, Modal, Form } from "react-bootstrap";
 
 export default function ProjPreview({ project }) {
+
   return (
     <div>
       <div>

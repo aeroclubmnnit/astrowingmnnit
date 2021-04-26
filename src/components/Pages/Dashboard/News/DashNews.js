@@ -28,7 +28,7 @@ export default function DashNews() {
       .then((data) => {
         setnews(data);
       });
-  });
+  }, []);
   return (
     <div className="container">
       <Accordion className="shadow">

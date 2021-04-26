@@ -48,7 +48,6 @@ function App() {
     const { hash } = window.location;
     if (hash !== "") {
       let id = hash.replace("#/", "");
-      console.log(id);
       const element = document.getElementById(id);
       if (element)
         element.scrollIntoView({ behavior: "smooth", block: "start" });

@@ -18,7 +18,7 @@ function Blogs() {
   }, []);
 
   const [page, SetPage] = useState(1);
-  const blogs_per_page = 6;
+  const blogs_per_page = 9;
   const no_of_pages = Math.ceil(blogs.length / blogs_per_page);
   const year = {
     1: "1st year",
@@ -93,8 +93,6 @@ function Blogs() {
                               </div>
                             </OverlayTrigger>
                         }
-                        {/* <br />
-                        <i className="fa fa-calendar mr-3 ml-1"></i> {new Date(blog.publishedAt).toLocaleDateString()} */}
                       </p>
                       <Button
                         className="btns card_btns"
