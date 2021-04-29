@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Loading from '../../Animations/Loading';
-import f1 from "../../images/coordinators&Nontech/Abhinav Anand.png";
+import f1 from "../../images/coordinators&Nontech/Abhinav Anand.jpeg";
 import f2 from "../../images/coordinators&Nontech/Ishan Gupta.jpeg";
 import f3 from "../../images/coordinators&Nontech/Parnab Ghosh.jpeg";
 import { REACT_APP_BASE_TITLE, REACT_APP_SERVER } from "../../grobalVars"

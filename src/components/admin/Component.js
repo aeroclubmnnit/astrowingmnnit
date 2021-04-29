@@ -4,9 +4,7 @@ import {
   DeleteButton,
   Edit,
   EditButton,
-  FileInput,
   ImageField,
-  ImageInput,
   List,
   number,
   NumberInput,
@@ -20,12 +18,8 @@ import {
 } from "react-admin";
 
 const types_arr = [
-  "Transmitter And Receiver",
-  "Batteries",
-  "Mechanical Tools",
-  "Electronic Components and Sensors",
-  "Development Boards",
-  "Material For Drones and Planes",
+  "Telescope",
+  "Accessories",
 ];
 const types = types_arr.map((type) => ({
   id: type,
@@ -34,12 +28,12 @@ const types = types_arr.map((type) => ({
 
 export const ComponentList = (props) => {
   return (
-    <List {...props}>
+    <List {...props} bulkActionButtons={false}>
       <Datagrid>
         <TextField source="id" />
         <TextField source="name" />
         <TextField source="type" label="Type" />
-        <ImageField source="image_url" label="Image" />
+        <ImageField source="pic" label="Image" />
         <TextField source="available" />
         <TextField source="issued" />
         <EditButton basePath="/component" />
@@ -60,7 +54,7 @@ export const ComponentCreate = (props) => {
           validate={[required()]}
           label="Type"
         />
-        <TextInput source="image_url" label="Image" validate={[required()]} />
+        <TextInput source="pic" label="Image" validate={[required()]} />
         <NumberInput source="available" validate={[required(), number()]} />
       </SimpleForm>
     </Create>
@@ -78,7 +72,7 @@ export const ComponentEdit = (props) => {
           validate={[required()]}
           label="Type"
         />
-        <TextInput source="image_url" label="Image" validate={[required()]} />
+        <TextInput source="pic" label="Image" validate={[required()]} />
         <NumberInput source="available" validate={[required(), number()]} />
       </SimpleForm>
     </Edit>
@@ -92,7 +86,7 @@ export const ComponentShow = (props) => {
         <TextField source="id" />
         <TextField source="name" />
         <TextField source="type" label="Type" />
-        <TextInput source="image_url" label="Image" validate={[required()]} />
+        <ImageField source="pic" label="Image" validate={[required()]} />
         <TextField source="available" />
         <TextField source="issued" />
       </SimpleShowLayout>

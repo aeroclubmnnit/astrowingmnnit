@@ -10,7 +10,6 @@ function SingleAstrophoto() {
     const history = useHistory();
 
     useEffect(() => {
-        document.title = `Project-${photoId} | ${REACT_APP_BASE_TITLE}`;
         fetch(`${REACT_APP_SERVER}/api//astrophotographies/${photoId}`, {
             method: "get",
             headers: {
@@ -20,6 +19,7 @@ function SingleAstrophoto() {
         })
             .then((res) => res.json())
             .then((data) => {
+                document.title = `${data.title} | ${REACT_APP_BASE_TITLE}`;
                 if (data.error) history.push("/404");
                 setPhoto(data);
             });
@@ -40,7 +40,7 @@ function SingleAstrophoto() {
                     <hr />
                     <div className="image mx-auto" style={{ maxWidth: '50rem' }}>
                         <a href={photo?.pic} target="_blank">
-                            <img src={photo?.pic} alt="img" className='my-3 photo__photo' />
+                            <img src={photo?.pic} alt="img" className='my-3 photo__photo shadow' />
                         </a>
                     </div>
                     <hr />

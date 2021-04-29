@@ -2,16 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import Loading from "../../Animations/Loading";
 import "../../css/featured-proj.css";
-import { REACT_APP_BASE_TITLE, REACT_APP_SERVER } from "../../grobalVars"
+import { REACT_APP_BASE_TITLE, REACT_APP_SERVER } from "../../grobalVars";
 
 function FeaturedProjects() {
-
   const [projects, SetProjects] = useState([]);
-  const [signedin, setsignedin] = useState(false)
-  document.title = `Projects | ${REACT_APP_BASE_TITLE}`;
+  const [signedin, setsignedin] = useState(false);
+  document.title = `Flagship Projects | ${REACT_APP_BASE_TITLE}`;
 
   useEffect(() => {
-
     fetch(`${REACT_APP_SERVER}/api/isSignedIn`, {
       method: "post",
       headers: {
@@ -32,7 +30,7 @@ function FeaturedProjects() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        console.log(data)
         return SetProjects(data);
       });
   }, []);
@@ -46,7 +44,16 @@ function FeaturedProjects() {
       <Loading time={2} />
       <div className="cont">
         <h3 className="my-3 titleBold d-flex justify-content-center topic">
-          <p className="" style={{ marginBottom: "0px", textAlign: "center", color: "rgb(29, 29, 29)" }}>FLAGSHIP PROJECTS</p>
+          <p
+            className=""
+            style={{
+              marginBottom: "0px",
+              textAlign: "center",
+              color: "rgb(29, 29, 29)",
+            }}
+          >
+            FLAGSHIP PROJECTS
+          </p>
         </h3>
         <div
           className="miniSep"
@@ -59,34 +66,58 @@ function FeaturedProjects() {
           <ul className="cards">
             {projects
               .slice((page - 1) * projects_per_page, page * projects_per_page)
-              .map((project) =>
-                project.open || signedin ? (
-                  <li className="cards_item" data-aos="fade-up" data-aos="flip-left" data-aos-easing="linear"
-                    data-aos-duration="1500">
-                    <div className="card cardproj">
-                      <div className="card_image">
-                        <img className="evfeatured" src={project.pic || 'https://lh3.googleusercontent.com/22uNNnzS6tHVU9N-BR3zlu6S_Fg03yb5omXJtTbR7Ixcd_FRL23sNadI2G5X0tkoQAqcjzwMPf5BXDYdtCWtfxcmEN90ybDONZCzQdQiIcnrnIg9oAhrjRjiCqGwXxx8tDsk4yH89A=w2400'} style={{ width: '100%', maxHeight: '18rem', minHeight: '18rem' }} />
-                      </div>
-                      <div className="card_content forphone forphone1" style={{ width: '100%' }}>
-                        <h2 className="card_title forphone forphone2" style={{ width: '100%' }}>{project.title}</h2>
-                        <p className="card_text forphone forphone3" style={{ width: '100%' }}>
-                          <strong>OBJECTIVE</strong> : {project.objective} <br /> <br />
-                        </p>
-                        <Button
-                          className="btns card_btns"
-                          variant="primary"
-                          href={`${window.location.origin}/projects/${project._id}`}
-                          style={{ marginTop: 10 }}
-                        >
-                          Read More
-                  </Button>
-                      </div>
+              .map((project) => (
+                <li
+                  className="cards_item"
+                  data-aos="fade-up"
+                  data-aos="flip-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div className="card cardproj">
+                    <div className="card_image">
+                      <img
+                        className="evfeatured"
+                        src={
+                          project.pic ||
+                          "https://lh3.googleusercontent.com/22uNNnzS6tHVU9N-BR3zlu6S_Fg03yb5omXJtTbR7Ixcd_FRL23sNadI2G5X0tkoQAqcjzwMPf5BXDYdtCWtfxcmEN90ybDONZCzQdQiIcnrnIg9oAhrjRjiCqGwXxx8tDsk4yH89A=w2400"
+                        }
+                        style={{
+                          width: "100%",
+                          maxHeight: "18rem",
+                          minHeight: "18rem",
+                        }}
+                      />
                     </div>
-                  </li>
-                ) : (
-                  <div></div>
-                )
-              )}
+                    <div
+                      className="card_content forphone forphone1"
+                      style={{ width: "100%" }}
+                    >
+                      <h2
+                        className="card_title forphone forphone2"
+                        style={{ width: "100%" }}
+                      >
+                        {project.title}
+                      </h2>
+                      <p
+                        className="card_text forphone forphone3"
+                        style={{ width: "100%" }}
+                      >
+                        <strong>OBJECTIVE</strong> : {project.objective} <br />{" "}
+                        <br />
+                      </p>
+                      <Button
+                        className="btns card_btns"
+                        variant="primary"
+                        href={`${window.location.origin}/projects/${project._id}`}
+                        style={{ marginTop: 10 }}
+                      >
+                        Read More
+                      </Button>
+                    </div>
+                  </div>
+                </li>
+              ))}
           </ul>
           {!projects.length && (
             <h3 className="text-center mt-5">No projects available...!</h3>

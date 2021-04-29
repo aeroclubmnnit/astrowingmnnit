@@ -34,7 +34,7 @@ import RichTextQuill from "./RichTextQuill";
 
 export const ProjectList = (props) => {
   return (
-    <List {...props}>
+    <List {...props} bulkActionButtons={false}>
       <Datagrid>
         <TextField source="id" />
         <TextField source="title" />
@@ -83,7 +83,7 @@ export const ProjectCreate = (props) => {
         <DateInput
           source="issuedon"
           label="Issued On"
-          defaultValue={new Date()}
+          defaultValue={Date.now()}
         />
         <TextInput source="ytID" label="Youtube Embed ID" />
         <BooleanInput source="featured" label="Featured" />

@@ -40,7 +40,7 @@ function PasswordReset() {
       return;
     }
 
-    fetch(`${process.env.REACT_APP_SERVER}/api/reset-password`, {
+    fetch(`${REACT_APP_SERVER}/api/reset-password`, {
       method: "post",
       headers: {
         Authorization: `Bearer ${token}`,

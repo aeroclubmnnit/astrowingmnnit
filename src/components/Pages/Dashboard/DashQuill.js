@@ -78,7 +78,7 @@ export default function DashQuill({ text, setText, id }) {
                 onChange={(content, delta, source, editor) => {
                     setText(editor.getHTML());
                 }}
-                value={text}
+                value={text || ''}
             />
         </div>
     );

@@ -1,3 +1,13 @@
 .bgrt{
     background-color: #fafafa !important;
 }
+
+.tsparticles-canvas-el{
+    height: 100%;
+    width: 100%; 
+    background-color: rgb(113, 116, 210); 
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0
+}

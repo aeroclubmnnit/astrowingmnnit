@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { toast } from "react-toastify";
-import { Accordion, Card } from 'react-bootstrap';
-import { REACT_APP_BASE_TITLE, REACT_APP_SERVER } from "../../../../grobalVars"
+import { Accordion, Card } from "react-bootstrap";
+import { REACT_APP_BASE_TITLE, REACT_APP_SERVER } from "../../../../grobalVars";
 
 export default function DashNews() {
   const [news, setnews] = useState([]);
@@ -42,7 +42,10 @@ export default function DashNews() {
               >
                 <div>
                   {singleNews.title}
-                  <em className="float-right font-weight-bold" style={{ fontSize: "small" }}>
+                  <em
+                    className="float-right font-weight-bold"
+                    style={{ fontSize: "small" }}
+                  >
                     ~ {new Date(singleNews.publishedAt).toLocaleDateString()}
                   </em>
                 </div>

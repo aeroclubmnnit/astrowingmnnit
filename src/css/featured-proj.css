@@ -15,6 +15,7 @@
 
 .cont {
   position: relative;
+  min-height: 33rem;
   /* background-color: rgb(240, 240, 240); */
   /* opacity: 0.4; */
 }

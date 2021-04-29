@@ -11,7 +11,6 @@ function SingleProject() {
   const history = useHistory();
 
   useEffect(() => {
-    document.title = `Project-${projectId} | ${REACT_APP_BASE_TITLE}`;
 
     $(document).ready(function () {
       $('#collapsebtn').on('click', function () {
@@ -34,7 +33,10 @@ function SingleProject() {
       .then((res) => res.json())
       .then((data) => {
         if (data.error) history.push("/404");
-        setProject(data);
+        else {
+          document.title = `${data.title} | ${REACT_APP_BASE_TITLE}`;
+          setProject(data);
+        }
       });
   }, []);
 

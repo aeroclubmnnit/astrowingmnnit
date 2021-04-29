@@ -23,7 +23,7 @@ import RichTextQuill from "./RichTextQuill";
 
 export const NewsList = (props) => {
     return (
-        <List {...props}>
+        <List {...props} bulkActionButtons={false}>
             <Datagrid>
                 <TextField source="id" />
                 <TextField source="title" />

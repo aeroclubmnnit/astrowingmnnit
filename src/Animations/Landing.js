@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Landing.css";
-import m from "../images/utils/astro_logo5.png";
+import m from "../images/utils/astro_logo7.png";
 
 class Landing extends React.Component {
   render() {
@@ -12,11 +12,11 @@ class Landing extends React.Component {
               <div className="landing-logo mb-3">
                 <img src={m} alt="aero" />
               </div>
-              <div className="landing-about">
+              {/* <div className="landing-about">
                 <h1 className="font-weight-bold text-uppercase">
                   AstroWing MNNIT
                 </h1>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

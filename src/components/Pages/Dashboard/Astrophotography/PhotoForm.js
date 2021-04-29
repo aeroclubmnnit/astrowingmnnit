@@ -20,11 +20,13 @@ export default function PhotoForm() {
   const [definedTags, setDefinedTags] = useState([]);
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
+  const [const_tags, setconst_tags] = useState([]);
   useEffect(() => {
     fetch(`${REACT_APP_SERVER}/api/tags`, { method: "GET" })
       .then((res) => res.json())
       .then((data) => {
         setDefinedTags(data);
+        setconst_tags(data);
       });
   }, []);
   return (
@@ -63,34 +65,34 @@ export default function PhotoForm() {
               }),
             })
               .then((res) => {
-                setformData({
-                  title: "",
-                  overview: "",
-                  desc: "",
-                  objective: "",
-                  pic: "",
-                });
-                setTags([]);
-                res.json().then((data) => {
-                  toast.success("Photo Created !");
-                  document
-                    .getElementById("collapsenewphoto")
-                    .classList.remove("show");
-                  console.log(data);
-                  dispatch({ type: "CREATE_PHOTO", payload: data });
-                  setLoading(false);
-                });
+                if (res.status === 200) {
+                  setformData({
+                    title: "",
+                    overview: "",
+                    desc: "",
+                    objective: "",
+                    pic: "",
+                    instrumentUsed: "",
+                    instrumentSettings: "",
+                  });
+                  setTags([]);
+                  setDefinedTags(const_tags);
+                  res.json().then((data) => {
+                    toast.success("Photo Created !");
+                    document
+                      .getElementById("collapsenewphoto")
+                      .classList.remove("show");
+                    dispatch({ type: "CREATE_PHOTO", payload: data });
+                  });
+                } else {
+                  res.json((data) => {
+                    toast.warn(data.err);
+                  });
+                }
+                setLoading(false);
               })
               .catch((err) => {
-                setLoading(false);
-                setformData({
-                  title: "",
-                  overview: "",
-                  desc: "",
-                  objective: "",
-                  pic: "",
-                });
-                setTags([]);
+                console.log(err);
               });
           }}
         >
@@ -127,9 +129,16 @@ export default function PhotoForm() {
             />
           </div>
           <label htmlFor="description">Description *</label>
-          <DashQuill text={formData.desc} id={v4()} setText={txt => setformData(prev => ({
-            ...prev, desc: txt
-          }))} />
+          <DashQuill
+            text={formData.desc}
+            id={v4()}
+            setText={(txt) =>
+              setformData((prev) => ({
+                ...prev,
+                desc: txt,
+              }))
+            }
+          />
           <div className="form-floating mb-3">
             <label htmlFor="instrumentsUsed">Instrument Used *</label>
             <input

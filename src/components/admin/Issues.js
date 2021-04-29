@@ -11,7 +11,7 @@ import {
 
 export const IssueList = (props) => {
   return (
-    <List {...props}>
+    <List {...props} bulkActionButtons={false}>
       <Datagrid>
         <TextField source="id" />
         <TextField source="user.name" label="Student" />

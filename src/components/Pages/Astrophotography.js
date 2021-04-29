@@ -60,8 +60,7 @@ function AstrophotoGraphy() {
                   key={photos._id}
                 >
                   <div
-                    className="card cardproj border"
-                    style={{ backgroundColor: "none" }}
+                    className="card cardproj"
                   >
                     <div className="card_image">
                       <img
@@ -76,14 +75,13 @@ function AstrophotoGraphy() {
                     </div>
                     <div
                       className="card_content forphone forphone1"
-                      style={{ width: "100%", background: "aliceblue" }}
+                      style={{ width: "100%" }}
                     >
                       <h2
                         className="card_title forphone text-center my-3"
                         style={{
                           width: "100%",
-                          fontSize: "x-large",
-                          color: "black",
+                          fontSize: "large",
                         }}
                       >
                         {photo.title}
@@ -92,7 +90,7 @@ function AstrophotoGraphy() {
                         className="card_text forphone forphone3"
                         style={{ width: "100%", height: "3rem" }}
                       >
-                        <strong style={{ color: "black" }}>Tags : </strong>
+                        <strong >Tags : </strong>
                         {photo.tags.map((tag, i) => (
                           <h5
                             className="d-inline"

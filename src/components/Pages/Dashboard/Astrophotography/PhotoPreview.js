@@ -28,7 +28,7 @@ export default function PhotoPreview({ photo }) {
                     <hr />
                     <div className="image mx-auto" style={{ maxWidth: '50rem' }}>
                         <a href={photo?.pic} target="_blank">
-                            <img src={photo?.pic} alt="img" className='my-3 photo__photo' />
+                            <img src={photo?.pic} alt="img" className='my-3 photo__photo shadow' />
                         </a>
                     </div>
                     <hr />

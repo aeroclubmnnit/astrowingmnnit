@@ -4,7 +4,7 @@ import "../../css/Alumni.css";
 import f1 from "../../images/gallery/faculty1.jpeg";
 import f2 from "../../images/gallery/faculty2.jpeg";
 import f3 from "../../images/gallery/faculty3.jpeg";
-import { REACT_APP_BASE_TITLE, REACT_APP_SERVER } from "../../grobalVars"
+import { REACT_APP_BASE_TITLE } from "../../grobalVars"
 
 export default function Faculty() {
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function Faculty() {
     <>
       <Loading time={2} />
       <h3 className="my-3 titleBold d-flex justify-content-center topic">
-        <p className="" style={{ marginBottom: "0px", textAlign: "center" }}>FACULTY INCHARGE</p>
+        <p className="" style={{ marginBottom: "0px", textAlign: "center" }}>FACULTY CORNER</p>
       </h3>
       <div
         className="miniSep"

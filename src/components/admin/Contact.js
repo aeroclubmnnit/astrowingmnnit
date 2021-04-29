@@ -12,7 +12,7 @@ import {
 
 export const ContactList = (props) => {
     return (
-        <List {...props}>
+        <List {...props} bulkActionButtons={false}>
             <Datagrid>
                 <TextField source="name" />
                 <TextField source="email" />

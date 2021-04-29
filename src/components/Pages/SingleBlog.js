@@ -32,14 +32,16 @@ function SingleBlog() {
   }
 
   useEffect(() => {
-    document.title = `Blog-${blogId} | ${REACT_APP_BASE_TITLE}`;
     fetch(`${REACT_APP_SERVER}/api/blogstoUI/${blogId}`, {
       method: "get",
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.error) history.push("/404");
-        else setBlog(data);
+        else {
+          document.title = `${data.title} | ${REACT_APP_BASE_TITLE}`;
+          setBlog(data);
+        }
       });
   }, []);
 

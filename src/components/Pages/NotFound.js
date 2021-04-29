@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { REACT_APP_BASE_TITLE, REACT_APP_SERVER } from "../../grobalVars"
+import { REACT_APP_BASE_TITLE } from "../../grobalVars"
 import Particles from "react-particles-js";
 
 export default function NotFound() {
@@ -14,10 +14,10 @@ export default function NotFound() {
   const particlesOptions = {
     particles: {
       number: {
-        value: 500,
+        value: 300,
         density: {
           enable: true,
-          value_area: 2000,
+          value_area: 1500,
         },
       },
     },
@@ -28,12 +28,6 @@ export default function NotFound() {
     <div style={{ height: "100vh" }}>
       <Particles
         params={particlesOptions}
-        style={{
-          height: "100%", width: "100%", background: "rgb(130 ,134 ,188)", zIndex: -1,
-          position: "absolute",
-          left: "0",
-          right: "0",
-        }}
       ></Particles>
       <div
         className="d-flex flex-column justify-content-center align-items-center my-auto"

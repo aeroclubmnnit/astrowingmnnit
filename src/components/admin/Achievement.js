@@ -24,7 +24,7 @@ import RichTextQuill from "./RichTextQuill";
 
 export const AchievementList = (props) => {
   return (
-    <List {...props}>
+    <List {...props} bulkActionButtons={false}>
       <Datagrid>
         <RichTextField source="desc" />
         <NumberField source="year" label="Year" />

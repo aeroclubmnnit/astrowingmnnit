@@ -80,9 +80,9 @@ function Signup() {
   return (
     <div className="login">
       <div className="container h-100 d-flex justify-content-center align-items-center">
-        <div className="login-logo">
+        {/* <div className="login-logo">
           <img src={m} alt="aeroclub" />
-        </div>
+        </div> */}
         <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
           <div className="card card-signin">
             <div className="card-body">

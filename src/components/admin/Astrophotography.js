@@ -32,7 +32,7 @@ import RichTextQuill from "./RichTextQuill";
 
 export const PhotoList = (props) => {
   return (
-    <List {...props}>
+    <List {...props} bulkActionButtons={false}>
       <Datagrid>
         <TextField source="id" />
         <TextField source="title" />
@@ -87,7 +87,7 @@ export const PhotoCreate = (props) => {
   return (
     <Create title="Create Photo" {...props}>
       <SimpleForm redirect="/astrophotographies">
-        <TextInput disabled label="Id" source="id" />
+        <TextInput source="pic" label="Image Link" validate={required()} />
         <TextInput
           source="instrumentUsed"
           label="instrument Used"
@@ -100,7 +100,6 @@ export const PhotoCreate = (props) => {
         />
         <TextInput source="title" validate={required()} label="Title" />
         <RichTextQuill source="desc" label="Description" />
-        <TextInput source="pic" label="Image Link" validate={required()} />
         <ArrayInput source="members">
           <SimpleFormIterator>
             <ReferenceInput label="User" source="user._id" reference="users">
@@ -117,7 +116,7 @@ export const PhotoCreate = (props) => {
             </ReferenceInput>
           </SimpleFormIterator>
         </ArrayInput>
-        <DateInput source="issuedon" label="Issued On" validate={required()} />
+        <DateInput source="issuedon" label="Issued On" validate={required()} defaultValue={Date.now()} />
         <BooleanInput source="approved" />
       </SimpleForm>
     </Create>
@@ -155,31 +154,3 @@ export const PhotoEdit = (props) => {
     </Edit>
   );
 };
-// choices={[
-//     { id: "Mercury", name: "Mercury" },
-//     { id: "Venus", name: "Venus" },
-//     { id: "Earth", name: "Earth" },
-//     { id: "Mars", name: "Mars" },
-//     { id: "Jupiter", name: "Jupiter" },
-//     { id: "Saturn", name: "Saturn" },
-//     { id: "Uranus", name: "Uranus" },
-//     { id: "Neptune", name: "Neptune" },
-//     { id: "Moon", name: "Moon" },
-//     { id: "Deep sky objects", name: "Deep sky objects" },
-//     { id: "Sun", name: "Sun" },
-//     { id: "Star Trails", name: "Star Trails" },
-//     { id: "Constellation", name: "Constellation" },
-//     { id: "Nebulae", name: "Nebulae" },
-//     { id: "Jan", name: "Jan" },
-//     { id: "Feb", name: "Feb" },
-//     { id: "Mar", name: "Mar" },
-//     { id: "Apr", name: "Apr" },
-//     { id: "May", name: "May" },
-//     { id: "June", name: "June" },
-//     { name: "July" },
-//     { id: "Aug", name: "Aug" },
-//     { id: "Sep", name: "Sep" },
-//     { id: "Oct", name: "Oct" },
-//     { id: "Nov", name: "Nov" },
-//     { id: "Dec", name: "Dec" },
-//   ]}

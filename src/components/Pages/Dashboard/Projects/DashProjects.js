@@ -33,17 +33,17 @@ export default function Dashprojects() {
   return (
     <div>
       <div className="container" style={{ minHeight: "60vh" }}>
-        <Accordion className='mt-2 mb-5'>
+        <Accordion className="mt-2 mb-5">
           {user?.projects?.map((project) => {
             let badge;
             const leaders = project?.members?.map((m) => {
               if (m.leader) return m.user._id;
             });
             let isCurLeader = leaders?.includes(user.id);
-            if (project.status === "Ongoing")
+            if (project?.status === "Ongoing")
               badge = (
                 <span class="badge badge-pill badge-warning">
-                  {project.status}
+                  {project?.status}
                 </span>
               );
             else if (project.status === "Completed")
@@ -63,7 +63,7 @@ export default function Dashprojects() {
                   </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey={project._id}>
-                  <Card.Body className='border'>
+                  <Card.Body className="border">
                     <div className="p-3">
                       <div>
                         <div>Members</div>
@@ -121,9 +121,9 @@ export default function Dashprojects() {
               </Card>
             );
           })}
-          {
-            user?.projects.length === 0 && <h3 className="text-center mt-5">No Project created...!</h3>
-          }
+          {user?.projects.length === 0 && (
+            <h3 className="text-center mt-5">No Project created...!</h3>
+          )}
         </Accordion>
         <ProjForm />
       </div>
