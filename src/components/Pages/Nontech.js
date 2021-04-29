@@ -15,6 +15,7 @@ import f11 from "../../images/coordinators&Nontech/Prasanna Sneha.jpg";
 import f12 from "../../images/coordinators&Nontech/Devansh Sethi.jpg";
 import f13 from "../../images/coordinators&Nontech/Hamza Siddiqui.jpg";
 import f14 from "../../images/coordinators&Nontech/Harsh Kumar Singh.jpg";
+import f15 from "../../images/coordinators&Nontech/Ankur Kumar.jpg";
 import { REACT_APP_BASE_TITLE } from "../../grobalVars"
 
 export default function Nontech() {
@@ -168,7 +169,16 @@ export default function Nontech() {
       branch: 'Electonics and Comm. Engg.',
       linkedinId: "harshkumarsingh325@gmail.com",
       branch: 'Electrical Engineering'
-    }
+    },
+    {
+      emailAddress: "ankur.20191080@mnnit.ac.in",
+      name: "Ankur Kumar",
+      year: "2nd",
+      team: "Design",
+      branch: 'Civil Engineering',
+      profilePicture: f15,
+      linkedinId: "https://www.linkedin.com/in/ankur-kumar-3565721a2/",
+    },
   ];
 
   return (
