@@ -2,6 +2,7 @@ import React from "react";
 import "../../css/testimonials.css";
 import shrey from "../../images/alumni/SHREY Dixit.jpg";
 import aman from "../../images/alumni/Aman Sharma(1).jpg"
+import vivek from "../../images/alumni/Vivek Kumar.jpg"
 
 
 export default function Testimonials() {
@@ -22,7 +23,7 @@ export default function Testimonials() {
         <div id="testimonial4" className="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval={5000} data-duration={2000} data-aos="zoom-in-down">
           <div className="carousel-inner" role="listbox">
             <div className="carousel-item active">
-              <div className="testimonial4_slide blockcol">
+              <div className="testimonial4_slide">
                 <img src={aman} className="img-circle img-responsive" /> 
                 {/* <div className="scrollert" id="stylet-2"> */}
                 <p className="testfont scrollert" id="stylet-2">"Indeed the best place to learn and show your creativity .Thanks to all the juniors, seniors, professors and my colleagues for supporting and guiding me to lead the club. Happy to see that the club is expanding continuously with new Astrowing dimension. The experience gained has helped me a lot to adjust to my corporate life. It was a roller coaster ride for me and I have enjoyed every bit of it!"</p>
@@ -35,11 +36,22 @@ export default function Testimonials() {
               </div>
             </div>
             <div className="carousel-item">
-              <div className="testimonial4_slide blockcol">
+              <div className="testimonial4_slide">
                 <img src={shrey} className="img-circle img-responsive" /><p className="testfont scrollert" id="stylet-2">"Among the darkest of the nights, we were able to conjure the brightest of the stars, a unique constellation; Astronomy wing, MNNIT. We learnt from yesterday, lived for today and hoped for a better tomorrow. But the important thing was that we never stopped questioning. I hope these qualities are passed down to our budding astronauts in our Astronomy wing, MNNIT while challenging all the limits and exploring the beyond.
                 "</p>
                 {/* <div className="miniSep" style={{ marginBottom: '25px', width: '70%', height: '3px' }} ></div> */}
                 <h4>Shrey Dixit</h4>
+                <a href="linkedin.com/in/shrey-dixit" target="_blank">
+                  <i className="fab fa-linkedin fa-3x mx-2 colchange"></i>
+                </a>'
+              </div>
+            </div>
+            <div className="carousel-item">
+              <div className="testimonial4_slide">
+                <img src={vivek} className="img-circle img-responsive" /><p className="testfont scrollert" id="stylet-2">"Two things have always inspired me to awe- the starry heavens above and the moral universe within. We gathered a group of crazy enthusiasts, who shared similar views and wanted to escape the ordinary, thus forming Astrowing, MNNIT where curiosity was the essence of the existence of its members. I have always believed that Somewhere...Something incredible is waiting to be known. From organising the astronomy quiz in the Avishkar to adding a new telescope in the club, it was the positive responses that we get from the juniors that kept us going forward to this incredible journey.
+                "</p>
+                {/* <div className="miniSep" style={{ marginBottom: '25px', width: '70%', height: '3px' }} ></div> */}
+                <h4>Vivek Kumar</h4>
                 <a href="linkedin.com/in/shrey-dixit" target="_blank">
                   <i className="fab fa-linkedin fa-3x mx-2 colchange"></i>
                 </a>'

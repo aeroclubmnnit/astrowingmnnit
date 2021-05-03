@@ -210,9 +210,11 @@
   padding: 20px;
   position: relative;
   text-align: center;
-  
-/* background: linear-gradient(90deg, rgb(45, 78, 128) 0%, #011320 100%); */
-  background-color:#111111;
+  /* background: rgb(227,93,93); */
+background: linear-gradient(90deg, rgba(45,78,128,1) 0%, rgba(1,19,32,1) 100%);
+  /* background-image: linear-gradient(to left,transparent, transparent 50%,rgb(45, 78, 128) 50%, #011320);
+  background: linear-gradient(90deg, rgb(45, 78, 128) 0%, #011320 100%); */
+  /* background-color:#111111; */
   border-radius: 20px;
 }
 .testimonial4_slide:after {

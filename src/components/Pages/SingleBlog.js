@@ -49,7 +49,7 @@ function SingleBlog() {
     <div>
       <Loading time={2} />
       <div
-        className="pagesp singleblog-pagesp"
+        className="pagesp singleblog-pagesp "
         style={{
           background: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,.4))`,
         }}
@@ -112,7 +112,7 @@ function SingleBlog() {
               <hr />
             </>
           }
-          <div dangerouslySetInnerHTML={{ __html: blog?.body }} className='my-5 ql-editor'></div>
+          <div dangerouslySetInnerHTML={{ __html: blog?.body }} className='my-5 ql-editor container'></div>
           <hr />
         </Container>
       </Jumbotron>

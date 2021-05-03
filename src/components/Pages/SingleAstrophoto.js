@@ -73,7 +73,7 @@ function SingleAstrophoto() {
                     <div className='' style={{ marginBottom: '5rem' }}>
                         <div className='my-3 photo__desc'>
                             <h3 className='my-3 subheaders'>Description : </h3>
-                            <div className="my-5 text-center ql-editor"
+                            <div className="my-5 text-center ql-editor container"
                                 dangerouslySetInnerHTML={{ __html: photo?.desc }}
                             >
                             </div>

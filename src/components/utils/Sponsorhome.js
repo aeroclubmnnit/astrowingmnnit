@@ -162,7 +162,7 @@ export default function Sponsorhome() {
                         <div className="card" style={{ width: '12rem' }}>
                             <a
                                 className="card-title text-center"
-                                href=""
+                                href="https://alumni.mnnit.ac.in/"
                                 target="_blank"
                             >
                                 <img

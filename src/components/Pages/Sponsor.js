@@ -56,14 +56,14 @@ export default function Ṣponsors() {
               <div class="collapse collapsews" id="collapse11">
                 <div class="card card-body details" >
                   <p className="just">Astrowing MNNIT, an offshoot of its parent club Aeroclub MNNIT, focuses entirely on <b>astronomy</b> and <b>theoretical sciences</b>. We operate as a separate wing under Aeroclub MNNIT, under Student Activity Centre(SAC), MNNIT Allahabad.
-Our expertise lies in blending our engineering skills with our passion for the sciences. 
+Our expertise lies in blending our engineering skills with our passion for the sciences.
 Our work spans equally among theoretical domains in core sciences and practical disciplines like <b>space science</b>, <b>quantum computing</b>, <b>machine learning</b>, <b>and data science</b> applications in astronomy, designing and 3D printing telescopes, observing the night sky through telescopes, and a lot more!</p>
 
-                <p className="just">We also conduct regular stargazing sessions, both with the naked eye and through our telescope, a different and out-of-the-world experience for students that amuse them and relieve them from their stressful lives. Also, we regularly organize quizzes and other intriguing activities related to sciences that are fun and enhance the student’s knowledge.
-In short, a lot of exciting stuff can happen when engineering meets science, and that's what we do. 
+                  <p className="just">We also conduct regular stargazing sessions, both with the naked eye and through our telescope, a different and out-of-the-world experience for students that amuse them and relieve them from their stressful lives. Also, we regularly organize quizzes and other intriguing activities related to sciences that are fun and enhance the student’s knowledge.
+                  In short, a lot of exciting stuff can happen when engineering meets science, and that's what we do.
 
 </p>
-                  
+
 
                 </div>
               </div>
@@ -103,7 +103,7 @@ In short, a lot of exciting stuff can happen when engineering meets science, and
                 <div class="card card-body details">
 
                   <p className="just">Engineering and sciences are not different fields; they are two approaches to the quest of understanding the universe. Without engineering, science is mere philosophy and vice versa.
-From telephones to CERN Supercollider, from exciting new materials to LIGO detectors, from semiconductors to quantum computing to discovery of cosmos, no invention could ever occur without the collaboration of science and engineering. 
+                  From telephones to CERN Supercollider, from exciting new materials to LIGO detectors, from semiconductors to quantum computing to discovery of cosmos, no invention could ever occur without the collaboration of science and engineering.
 However, right after JEE, when students who are fueled by their passion for sciences enter into engineering, they find it challenging to continue exploring the sciences, and that's where we facilitate interests. They do a lot of exciting work in the realm of sciences as a part of our clubs. Many even plan to take sciences as their <b>graduate studies</b>, thus contributing to the scientific domain with their engineering skills.
 Also, many people consider astronomy as a hobby, which helps them genuinely have an out-of-world experience, forgetting their worries and stressful lives, all the while peering at the celestial beauties.
 
@@ -113,7 +113,7 @@ Also, many people consider astronomy as a hobby, which helps them genuinely have
                   <p className="just">Also, being in an engineering college, <b>any form of academic / industrial mentorship</b> will help our curious individuals continue their passion for sciences and make something genuinely innovative when blended with their engineering expertise. If you choose to sponsor us, <b>we'll promote you</b> from all our social media accounts and our website's homepage too; this holds true regardless of whether you're an alumnus, individual or a company.
 
                   </p>
-                  <p className="just"><b>If you resonate with our cause and want to help us in any form, contact us at : </b> <i><a href="https://aeroclubmnnit.tk/" style={{textDecoration:"none", color:"red", fontWeight:"bold"}}>AEROCLUB MNNIT</a></i>
+                  <p className="just"><b>If you resonate with our cause and want to help us in any form, contact us at : </b> <i><a href="https://aeroclubmnnit.tk/" style={{ textDecoration: "none", color: "red", fontWeight: "bold" }}>AEROCLUB MNNIT</a></i>
 
                   </p>
 
@@ -401,7 +401,7 @@ Also, many people consider astronomy as a hobby, which helps them genuinely have
               {/* <h5 className="card-title text-center">MNNIT Allahabad</h5> */}
               <a
                 className="card-title text-center sponabt"
-                href="http://www.mnnit.ac.in/"
+                href="https://alumni.mnnit.ac.in/"
                 target="_blank"
               >
                 MNNIT Alumni Association

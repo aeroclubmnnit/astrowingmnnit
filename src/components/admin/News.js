@@ -31,7 +31,7 @@ export const NewsList = (props) => {
                 <DateField source="publishedAt" label="Published At" />
                 <ShowButton basePath='/news' />
                 <EditButton basePath="/news" />
-                <DeleteButton basePath="/news" />
+                <DeleteButton basePath="/news" undoable={false} />
             </Datagrid>
         </List>
     );

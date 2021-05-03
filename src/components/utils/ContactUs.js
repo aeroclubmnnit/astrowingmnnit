@@ -120,7 +120,7 @@ const ContactUs = () => {
                 <br />
                 MNNIT Allahabad Campus,
                 <br />
-                Teliarganj,Prayagraj <br />
+                Teliarganj, Prayagraj <br />
                 PIN-211004
               </div>
             </div>

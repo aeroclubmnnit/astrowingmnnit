@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../css/Loading.css";
-import m from '../images/utils/bh.gif'
+import m from '../images/utils/bh2.gif'
 
 function Loading({ time, confirmation }) {
   const [loading, setLoading] = useState(true);

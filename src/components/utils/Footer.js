@@ -24,7 +24,7 @@ export default function Footer() {
                       <br />
                       MNNIT Allahabad Campus,
                       <br />
-                      Teliarganj,Prayagraj
+                      Teliarganj, Prayagraj
                     </p>
                   </div>
                 </div>

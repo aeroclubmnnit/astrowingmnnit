@@ -38,8 +38,8 @@ export default function Collaboration() {
             style={{ marginBottom: "40px", background: "rgb(204, 67, 67)" }}
           ></div>
           <p className="text-xl paragr" style={{ textAlign: "justify" }}>
-          Astrowing MNNIT is a student body under the Student Activity Centre (SAC), MNNIT Allahabad. We are a group of like-minded engineering students from all the college departments. We are passionate about science and believe that engineers and scientists should work in unison for humanity's real progress. Being from a technical background, we have expertise in several fields like machine learning, data analysis, programming, electronics, designing, etc <Link to='/#restheme'>(Research Themes) </Link> 
-Also, we continuously strive to expand our knowledge in theoretical concepts of physics and astronomy. We have also completed various projects like 3D printing telescopes, detecting galaxies using machine learning, web-based quantum simulator, etc. (Link).
+          Astrowing MNNIT is a student body under the Student Activity Centre (SAC), MNNIT Allahabad. We are a group of like-minded engineering students from all the college departments. We are passionate about science and believe that engineers and scientists should work in unison for humanity's real progress. Being from a technical background, we have expertise in several fields like machine learning, data analysis, programming, electronics, designing, etc. 
+Also, we continuously strive to expand our knowledge in theoretical concepts of physics and astronomy. We have also completed various projects like 3D printing telescopes, detecting galaxies using machine learning, web-based quantum simulator, etc.
 We also have some experience observing the sky both through the naked eye and telescopes. 
 We offer our knowledge and commitment for any possible collaborations.</p>
 

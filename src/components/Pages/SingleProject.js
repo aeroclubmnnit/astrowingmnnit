@@ -130,7 +130,7 @@ function SingleProject() {
               <div >
                 <h3 className='my-3 subheaders'>Description</h3>
                 <p
-                  className="px-3 ql-editor"
+                  className="px-3 ql-editor container"
                   dangerouslySetInnerHTML={{ __html: project?.description }}
                 ></p>
               </div>

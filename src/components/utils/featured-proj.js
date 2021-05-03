@@ -44,12 +44,12 @@ export default function Featuredproject() {
                       <li className="cards_item" data-aos="fade-up" style={{ width: '100%' }} data-aos="flip-left">
                         <div className="card">
                           <div className="card_image">
-                            <img className="evfeatured" src={project.pic} style={{ width: '100%', maxHeight: '18rem', minHeight: '18rem' }} />
+                            <img className="evfeatured phoneviewproj" src={project.pic} />
                           </div>
                           <div className="card_content forphone forphone1" style={{ width: '100%' }}>
                             <h2 className="card_title forphone forphone2" style={{ width: '100%' }}>{project.title}</h2>
                             <p className="card_text forphone forphone3" style={{ width: '100%' }}>
-                              <strong>OBJECTIVE</strong> : {project.objective} <br /> <br />
+                              {project.objective} <br /> <br />
                             </p>
                             <Button
                               className="btns card_btns"

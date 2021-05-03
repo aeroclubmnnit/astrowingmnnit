@@ -130,7 +130,7 @@
 
 @media screen and (max-width: 1000px) {
   .details{
-    border: 2px solid rgb(204, 67, 67);
+    border: 2px solid rgb(41, 123, 176);
     border-radius: 5px;
     margin: auto;
     width:100%;
@@ -140,12 +140,12 @@
   .sponabt {
     /* text-decoration:none; */
     font-size: 1.2rem;
-    color: rgb(204, 67, 67);
+    color: rgb(41, 123, 176);
   }
   .sponabt:hover {
     text-decoration: none;
     transition: transform 400ms ease-in;
-    color: rgb(204, 67, 67);
+    color: rgb(41, 123, 176);
   }
   .card-item img {
     transform: none !important;
@@ -166,12 +166,12 @@
   .sponabt {
     /* text-decoration:none; */
     font-size: 1.2rem;
-    color: rgb(204, 67, 67);
+    color: rgb(41, 123, 176);
   }
   .sponabt:hover {
     text-decoration: none;
     transition: transform 400ms ease-in;
-    color: rgb(204, 67, 67);
+    color: rgb(41, 123, 176);
   }
   .card-item img {
     transform: none !important;

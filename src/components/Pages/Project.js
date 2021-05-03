@@ -67,13 +67,9 @@ function Projects() {
                   <div className="card cardproj">
                     <div className="card_image">
                       <img
-                        className="evfeatured"
+                        className="evfeatured phoneviewproj"
                         src={project.pic || 'https://lh3.googleusercontent.com/22uNNnzS6tHVU9N-BR3zlu6S_Fg03yb5omXJtTbR7Ixcd_FRL23sNadI2G5X0tkoQAqcjzwMPf5BXDYdtCWtfxcmEN90ybDONZCzQdQiIcnrnIg9oAhrjRjiCqGwXxx8tDsk4yH89A=w2400'}
-                        style={{
-                          width: "100%",
-                          maxHeight: "18rem",
-                          minHeight: "18rem",
-                        }}
+                        
                       />
                     </div>
                     <div
@@ -90,7 +86,7 @@ function Projects() {
                         className="card_text forphone forphone3"
                         style={{ width: "100%" }}
                       >
-                        <strong>OBJECTIVE</strong> : {project.objective} <br />{" "}
+                        {project.objective} <br />{" "}
                         <br />
                       </p>
                       <Button

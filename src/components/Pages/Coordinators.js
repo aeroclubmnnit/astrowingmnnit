@@ -6,7 +6,7 @@ import f2 from "../../images/coordinators&Nontech/Abhijeet Pandey.jpg";
 import f3 from "../../images/coordinators&Nontech/Harshika Peeyoosh.jpg";
 import f4 from "../../images/coordinators&Nontech/Siddharth Tiwari.jpeg";
 import f5 from "../../images/coordinators&Nontech/Aditya Gupta.jpeg";
-import f6 from "../../images/coordinators&Nontech/Dushyant Mittal.jpg";
+import f6 from "../../images/coordinators&Nontech/Dushyant Mittal.jpeg";
 import f7 from "../../images/coordinators&Nontech/Ankur Kumar.jpg";
 import f8 from "../../images/coordinators&Nontech/Nilotpal Mukherjee.jpeg";
 import f9 from "../../images/coordinators&Nontech/Bhuvan Jhamb.jpg";
@@ -65,8 +65,8 @@ export default function Coordinators() {
       "emailAddress": "dushyant.20186048@mnnit.ac.in",
       "name": "Dushyant Mittal",
       "year": "3rd",
-      "linkedinId": f6,
-      "photo": "https://drive.google.com/open?id=1r3NlKDn04egKJPcYVtqQ6u6wKMyk3VSU",
+      "linkedinId": "https://www.linkedin.com/in/dushyant-mittal-2b794a166/",
+      "photo": f6,
       "areaOfInterests": "Stellar Astronomy"
     },
     {
@@ -116,7 +116,7 @@ export default function Coordinators() {
       "linkedinId": "https://www.linkedin.com/in/archit-chaudhary-010a78164/",
       "photo": f12,
       "areaOfInterests": "theoretical physics"
-    }
+    },
   ];
 
   return (
@@ -133,7 +133,7 @@ export default function Coordinators() {
       <div className="pageTitle my-5 titleBold header white-heading padtop">
         Core Coordinators
       </div>
-      <div className="container alumni-container">
+      <div className="fluid-container alumni-container">
         <div className="d-flex flex-wrap m-auto justify-content-center align-items-center">
           {members.map(
             (member, i) =>
@@ -150,7 +150,8 @@ export default function Coordinators() {
                       {member.name}
                     </h5>
                     <p
-                      className="card-text text-center"
+                      id='style-2'
+                      className="card-text text-center scroller"
                       style={{ minHeight: "5rem" }}
                     >
                       <strong>Area of Interest</strong> :{" "}
@@ -167,10 +168,10 @@ export default function Coordinators() {
           )}
         </div>
       </div>
-      {/* <div className="pageTitle my-5 titleBold header white-heading padtop">
+      <div className="pageTitle my-5 titleBold header white-heading padtop">
         Senior Coordinators
       </div>
-      <div className="container alumni-container">
+      <div className="fluid-container alumni-container">
         <div className="d-flex flex-wrap m-auto justify-content-center align-items-center">
           {members.map(
             (member, i) =>
@@ -203,11 +204,11 @@ export default function Coordinators() {
               )
           )}
         </div>
-      </div> */}
+      </div>
       <div className="pageTitle my-5 titleBold header white-heading padtop">
         Junior Coordinators
       </div>
-      <div className="container alumni-container">
+      <div className="fluid-container alumni-container">
         <div className="d-flex flex-wrap m-auto justify-content-center align-items-center">
           {members.map(
             (member, i) =>

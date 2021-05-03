@@ -49,9 +49,9 @@
 .pageTitlep {
     text-transform: uppercase;
     font-weight: 300;
-    font-size: 45px;
+    font-size: 38px;
     padding-left: 4rem;
-    padding-top: 2em;
+    padding-top: 0em;
 }
 
 .iframe-container {

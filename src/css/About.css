@@ -58,21 +58,10 @@ body{
   width: 80%;
 }
 .col-image {
-  background: url("../images/utils/banner.jpg") center center no-repeat;
+  background: url("../images/utils/about1.jpg") center center no-repeat;
   background-size: cover;
   background-position:center center;
   /* padding: 0; */
-}
-
-.about-image{
-  background: url("../images/utils/banner.jpg") center center no-repeat;
-  background-size: cover;
-  /* background-size: contain; */
-  /* background-position: center; */
-  padding: 0;
-  height:36rem;
-  width: auto;
-  /* z-index: 999; */
 }
 
 .abttxt{

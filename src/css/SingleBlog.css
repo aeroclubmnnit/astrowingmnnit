@@ -12,6 +12,10 @@
   color: white;
 }
 
+.singleblog-pagesp{
+  height: 30vh;
+}
+
 .post-heading {
   margin-top: 2rem;
 }
