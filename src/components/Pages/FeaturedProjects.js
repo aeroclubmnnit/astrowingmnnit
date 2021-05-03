@@ -82,7 +82,7 @@ function FeaturedProjects() {
                           project.pic ||
                           "https://lh3.googleusercontent.com/22uNNnzS6tHVU9N-BR3zlu6S_Fg03yb5omXJtTbR7Ixcd_FRL23sNadI2G5X0tkoQAqcjzwMPf5BXDYdtCWtfxcmEN90ybDONZCzQdQiIcnrnIg9oAhrjRjiCqGwXxx8tDsk4yH89A=w2400"
                         }
-                        
+
                       />
                     </div>
                     <div
@@ -115,9 +115,6 @@ function FeaturedProjects() {
                 </li>
               ))}
           </ul>
-          {!projects.length && (
-            <h3 className="text-center mt-5">No projects available...!</h3>
-          )}
           <div className="float-right mr-5 mb-3 mt-5">
             {page > 1 && (
               <Button

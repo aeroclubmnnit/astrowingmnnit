@@ -41,7 +41,7 @@
 	height: 130px;
 	/* width: 65px; */
 	/* background: #F5F5F5; */
-	overflow-y: scroll;
+	overflow-y: auto;
 	margin-bottom: 25px;
 }
 

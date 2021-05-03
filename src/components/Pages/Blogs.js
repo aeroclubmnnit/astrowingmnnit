@@ -108,9 +108,6 @@ function Blogs() {
               )
               )}
           </ul>
-          {!blogs.length && (
-            <h3 className="text-center mt-5">No blogs available...!</h3>
-          )}
           <div className="float-right mr-5 mb-3 mt-5">
             {page > 1 && (
               <Button

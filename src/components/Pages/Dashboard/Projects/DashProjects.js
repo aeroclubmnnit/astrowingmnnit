@@ -9,9 +9,11 @@ import ProjEdit from "./ProjEdit";
 import ProjPreview from "./ProjPreview";
 
 export default function Dashprojects() {
+  const dispatch = useDispatch();
   const [modalShow, setModalShow] = React.useState(false);
   const user = useSelector((state) => state.user);
   const history = useHistory();
+  const [resetLoading, setresetLoading] = useState(false);
 
   useEffect(() => {
     fetch(`${REACT_APP_SERVER}/api/isSignedIn`, {
@@ -67,17 +69,47 @@ export default function Dashprojects() {
                     <div className="p-3">
                       <div>
                         <div>Members</div>
-                        {isCurLeader ? (
-                          <Button
-                            onClick={() => {
-                              setModalShow(true);
-                            }}
-                          >
-                            Invite
-                          </Button>
-                        ) : (
-                          <span></span>
-                        )}
+                        <div className="d-flex">
+                          {isCurLeader ? (
+                            <Button
+                              className="mx-2"
+                              onClick={() => {
+                                setModalShow(true);
+                              }}
+                            >
+                              Invite
+                            </Button>
+                          ) : (
+                            <span></span>
+                          )}
+                          <div>
+                            <Button
+                              onClick={(e) => {
+                                setresetLoading(true);
+                                fetch(
+                                  `${REACT_APP_SERVER}/api/share/reset/${project._id}`,
+                                  {
+                                    headers: {
+                                      Authorization: `Bearer ${localStorage.getItem(
+                                        "jwtToken"
+                                      )}`,
+                                    },
+                                  }
+                                )
+                                  .then((res) => res.json())
+                                  .then((data) => {
+                                    dispatch({
+                                      type: "RESET_PROJECT_LINK",
+                                      payload: data,
+                                    });
+                                    setresetLoading(false);
+                                  });
+                              }}
+                            >
+                              {resetLoading ? "Loading..." : "Reset Link"}
+                            </Button>
+                          </div>
+                        </div>
 
                         <ul>
                           {project?.members?.map((member, i) => {
@@ -109,6 +141,12 @@ export default function Dashprojects() {
                           <ProjEdit project={project} />
                         )}
                         <ProjPreview project={project} />
+                        <div>
+                          Share{" "}
+                          <a href={`/sharedProject/${project?.shareId}`}>
+                            link
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </Card.Body>

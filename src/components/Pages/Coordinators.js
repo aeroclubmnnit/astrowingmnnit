@@ -150,7 +150,7 @@ export default function Coordinators() {
                       {member.name}
                     </h5>
                     <p
-                      id='style-2'
+                      id='style-3'
                       className="card-text text-center scroller"
                       style={{ minHeight: "5rem" }}
                     >
@@ -188,7 +188,8 @@ export default function Coordinators() {
                       {member.name}
                     </h5>
                     <p
-                      className="card-text text-center"
+                      id='style-3'
+                      className="card-text text-center scroller"
                       style={{ minHeight: "5rem" }}
                     >
                       <strong>Area of Interest</strong> :{" "}
@@ -225,7 +226,8 @@ export default function Coordinators() {
                       {member.name}
                     </h5>
                     <p
-                      className="card-text text-center"
+                      id='style-3'
+                      className="card-text text-center scroller"
                       style={{ minHeight: "5rem" }}
                     >
                       <strong>Area of Interest</strong> :{" "}

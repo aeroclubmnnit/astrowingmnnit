@@ -87,7 +87,7 @@ const ResearchThemes = () => {
                 style={{ marginBottom: "1rem", borderRadius: "10px" }}
               >
                 <div
-                  className="card-body cardbd blockcol"
+                  className="card-body cardbd"
                   style={{ borderRadius: "10px", margin: "2px" }}
                 >
                   <h5 className="card-title" style={{ color: "white" }}>
@@ -123,7 +123,7 @@ const ResearchThemes = () => {
                 style={{ marginBottom: "1rem", borderRadius: "10px" }}
               >
                 <div
-                  className="card-body cardbd blockcol"
+                  className="card-body cardbd"
                   style={{ borderRadius: "10px", margin: "2px" }}
                 >
                   <h5 className="card-title" style={{ color: "white" }}>
@@ -159,7 +159,7 @@ const ResearchThemes = () => {
                 style={{ marginBottom: "1rem", borderRadius: "10px" }}
               >
                 <div
-                  className="card-body cardbd blockcol"
+                  className="card-body cardbd"
                   style={{ borderRadius: "10px", margin: "2px" }}
                 >
                   <h5 className="card-title" style={{ color: "white" }}>
@@ -196,7 +196,7 @@ const ResearchThemes = () => {
                 style={{ marginBottom: "1rem", borderRadius: "10px" }}
               >
                 <div
-                  className="card-body cardbd blockcol"
+                  className="card-body cardbd"
                   style={{ borderRadius: "10px", margin: "2px" }}
                 >
                   <h5 className="card-title" style={{ color: "white" }}>
@@ -233,7 +233,7 @@ const ResearchThemes = () => {
                 style={{ marginBottom: "1rem", borderRadius: "10px" }}
               >
                 <div
-                  className="card-body cardbd blockcol"
+                  className="card-body cardbd"
                   style={{ borderRadius: "10px", margin: "2px" }}
                 >
                   <h5 className="card-title" style={{ color: "white" }}>

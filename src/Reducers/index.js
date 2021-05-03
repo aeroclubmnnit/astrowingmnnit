@@ -62,6 +62,17 @@ const userReducer = (user = null, action) => {
           else return p;
         }),
       };
+    case "RESET_PROJECT_LINK":
+      return {
+        ...user,
+        projects: user.projects.map((p) => {
+          if (p._id === action.payload._id) {
+            let newP = p;
+            newP.shareId = action.payload.shareId;
+            return newP;
+          } else return p;
+        }),
+      };
     case "CREATE_PHOTO":
       return {
         ...user,

@@ -90,13 +90,13 @@ export default function Alumni() {
             </div>
             <div id="collapse2020" className="panel-collapse collapse show">
               <div className="panel-body">
-                <div className="container">
+                <div className="fluid-container">
                   <div className="d-flex flex-wrap m-auto justify-content-center align-items-center">
                     {members.map(
                       (member, i) =>
                         member.yearOfGraduation === 2020 && (
                           <div
-                            className="card card-item shadow item-alumni"
+                            className="card card-item-1 shadow item-alumni"
                             style={{ width: "17rem", minHeight: '33rem', maxHeight: '33rem' }}
                             key={i}
                           >
@@ -152,7 +152,7 @@ export default function Alumni() {
             <div id="collapse2019" className="panel-collapse collapse">
               <div className="panel-body">
                 <div
-                  className="container"
+                  className="fluid-container"
 
                 >
                   <div className="d-flex flex-wrap m-auto justify-content-center align-items-center">
@@ -160,7 +160,7 @@ export default function Alumni() {
                       (member, i) =>
                         member.yearOfGraduation === 2019 && (
                           <div
-                            className="card card-item shadow item-alumni"
+                            className="card card-item-1 shadow item-alumni"
                             style={{ width: "17rem", minHeight: '33rem', maxHeight: '33rem' }}
                             key={i}
                           >

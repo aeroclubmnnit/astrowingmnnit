@@ -43,7 +43,7 @@ function Projects() {
       <Loading time={2} />
       <div className="cont">
         <h3 className="my-3 titleBold d-flex justify-content-center topic">
-          <p className="" style={{ marginBottom: "0px", textAlign: "center" }}>PROJECTS</p>
+          <p className="" style={{ marginBottom: "0px", textAlign: "center" }}>OTHER PROJECTS</p>
         </h3>
         <div
           className="miniSep"
@@ -69,7 +69,7 @@ function Projects() {
                       <img
                         className="evfeatured phoneviewproj"
                         src={project.pic || 'https://lh3.googleusercontent.com/22uNNnzS6tHVU9N-BR3zlu6S_Fg03yb5omXJtTbR7Ixcd_FRL23sNadI2G5X0tkoQAqcjzwMPf5BXDYdtCWtfxcmEN90ybDONZCzQdQiIcnrnIg9oAhrjRjiCqGwXxx8tDsk4yH89A=w2400'}
-                        
+
                       />
                     </div>
                     <div
@@ -102,9 +102,6 @@ function Projects() {
                 </li>
               ))}
           </ul>
-          {!projects.length && (
-            <h3 className="text-center mt-5">No projects available...!</h3>
-          )}
           <div className="float-right mr-5 mb-3 mt-5">
             {page > 1 && (
               <Button

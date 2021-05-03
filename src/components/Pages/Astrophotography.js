@@ -73,7 +73,7 @@ function AstrophotoGraphy() {
                   data-aos-duration="1500"
                   key={photo.id}
                 >
-                {/* <div className="container">
+                  {/* <div className="container">
         <h3 className="title">Text fadeIn bottom</h3>
         <div className="content card cardproj hovpic">
           <a href={`/astrophotography/${photo.id}` }>
@@ -86,43 +86,43 @@ function AstrophotoGraphy() {
           </a>
         </div>
       </div> */}
-                  <div className="card cardproj hovpic">
+                  <div className="card hovpic astroproj">
                     {/* <p className="content_img"> */}
-                      <a href={`/astrophotography/${photo.id}`} ><img
-                        // className="evfeatured"
-                        src={photo.pic}
-                        // style={{
-                        //   width: "100%",
-                        //   maxHeight: "18rem",
-                        //   minHeight: "18rem",
-                        // }}
-                      /></a>
-                      
-                      <div
-                        className="card_text forphone forphone3 img-text"
-                        style={{ width: "100%", height: "3rem" }}
-                      >
-                        {/* <strong>Tags : </strong> */}
-                        <p style={{paddingLeft:"2px"}}>Click to Know More </p>
-                        {photo.tags.map((tag, i) => (
-                          <h5
-                            className="d-inline"
-                            key={i}
-                            style={{ cursor: "pointer" }}
-                            onClick={(e) => handleTagFilter(tag)}
-                          >
-                            <span className="badge badge-primary my-1 mx-1">
-                              {tag.name}
-                            </span>
-                          </h5>
-                        ))}
-                      </div>
+                    <a href={`/astrophotography/${photo.id}`} ><img
+                      // className="evfeatured"
+                      src={photo.pic}
+                    // style={{
+                    //   width: "100%",
+                    //   maxHeight: "18rem",
+                    //   minHeight: "18rem",
+                    // }}
+                    /></a>
+
+                    <div
+                      className="card_text forphone forphone3 img-text"
+                      style={{ width: "100%", height: "3rem" }}
+                    >
+                      {/* <strong>Tags : </strong> */}
+                      <p style={{ paddingLeft: "2px" }}>Click to Know More </p>
+                      {photo.tags.map((tag, i) => (
+                        <h5
+                          className="d-inline"
+                          key={i}
+                          style={{ cursor: "pointer" }}
+                          onClick={(e) => handleTagFilter(tag)}
+                        >
+                          <span className="badge badge-primary my-1 mx-1">
+                            {tag.name}
+                          </span>
+                        </h5>
+                      ))}
+                    </div>
                     {/* </p> */}
                     {/* <div
                       className="card_content forphone forphone1"
                       style={{ width: "100%" }}
                     > */}
-                      {/* <h2
+                    {/* <h2
                         className="card_title forphone text-center my-3"
                         style={{
                           width: "100%",
@@ -131,7 +131,7 @@ function AstrophotoGraphy() {
                       >
                         {photo.title}
                       </h2> */}
-                      {/* <p
+                    {/* <p
                         className="card_text forphone forphone3"
                         style={{ width: "100%", height: "3rem" }}
                       >
@@ -149,7 +149,7 @@ function AstrophotoGraphy() {
                           </h5>
                         ))}
                       </p> */}
-                      {/* <Button
+                    {/* <Button
                         className="btns card_btns"
                         href={`/astrophotography/${photo.id}`}
                         style={{
@@ -165,9 +165,6 @@ function AstrophotoGraphy() {
                 </li>
               ))}
           </ul>
-          {!photos.length && (
-            <h3 className="text-center mt-5">No photos available...!</h3>
-          )}
           <div className="float-right mr-5 mb-3 mt-5">
             {page > 1 && (
               <Button

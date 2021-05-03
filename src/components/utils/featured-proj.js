@@ -65,7 +65,7 @@ export default function Featuredproject() {
                   ))}
                 </OwlCarousel>
               ) :
-                <p className='text-center'> Loading ...!</p>
+                null
             }
           </ul>
         </div>
