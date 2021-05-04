@@ -36,7 +36,6 @@ export const PhotoList = (props) => {
       <Datagrid>
         <TextField source="id" />
         <TextField source="title" />
-        <ImageField source="pic" label="image" />
         <BooleanField source="approved" />
         <ShowButton basePath="/astrophotographies" />
         <EditButton basePath="/astrophotographies" />
