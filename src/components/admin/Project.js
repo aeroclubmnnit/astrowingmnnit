@@ -27,16 +27,21 @@ import {
   ReferenceField,
   ChipField,
   SingleFieldList,
+  UrlField,
 } from "react-admin";
 
 import TextArrayField from "./TextArrayField";
 import RichTextQuill from "./RichTextQuill";
+import { REACT_APP_SERVER } from "../../grobalVars";
+import ShareLink from "./ShareLink";
+import ShareField from "./ShareField";
 
 export const ProjectList = (props) => {
   return (
     <List {...props} bulkActionButtons={false}>
       <Datagrid>
         <TextField source="id" />
+        <ShareLink source="shareId" />
         <TextField source="title" />
         <DateField source="issuedon" label="Issued On" />
         <TextField source="status" />
@@ -75,7 +80,7 @@ export const ProjectCreate = (props) => {
             <BooleanInput source="leader" label="Leader" />
           </SimpleFormIterator>
         </ArrayInput>
-        <ArrayInput source="compTech" label="Components and technologies used" >
+        <ArrayInput source="compTech" label="Components and technologies used">
           <SimpleFormIterator>
             <TextInput label="" />
           </SimpleFormIterator>
@@ -104,6 +109,7 @@ export const ProjectShow = (props) => {
         <RichTextField source="description" label="Description" />
         <ImageField source="pic" label="Image" />
         <TextField source="status" label="Status" />
+        <ShareField source="shareId" />
         <ArrayField source="members">
           <Datagrid>
             <ReferenceField
@@ -120,9 +126,12 @@ export const ProjectShow = (props) => {
         </ArrayField>
         <DateField source="issuedon" label="Issued On" />
         <BooleanField source="featured" label="Featured" />
-        <TextArrayField source='compTech' label='Components and Technologies used'>
+        <TextArrayField
+          source="compTech"
+          label="Components and Technologies used"
+        >
           <SingleFieldList>
-            <ChipField source='id' />
+            <ChipField source="id" />
           </SingleFieldList>
         </TextArrayField>
         <BooleanField source="home" />

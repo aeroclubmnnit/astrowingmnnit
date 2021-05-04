@@ -1,20 +1,19 @@
-import Chip from '@material-ui/core/Chip'
+import Chip from "@material-ui/core/Chip";
 
 const TextArrayField = ({ record, source }) => {
+  const array = record[source];
+  if (typeof array === "undefined" || array === null || array.length === 0) {
+    return <div />;
+  } else {
+    return (
+      <>
+        {array.map((item) => (
+          <Chip label={item} key={item} className="mx-1" />
+        ))}
+      </>
+    );
+  }
+};
 
-    console.log(record, source)
-
-    const array = record[source]
-    if (typeof array === 'undefined' || array === null || array.length === 0) {
-        return <div />
-    } else {
-        return (
-            <>
-                {array.map(item => <Chip label={item} key={item} className='mx-1' />)}
-            </>
-        )
-    }
-}
-
-TextArrayField.defaultProps = { addLabel: true }
-export default TextArrayField
+TextArrayField.defaultProps = { addLabel: true };
+export default TextArrayField;

@@ -141,12 +141,29 @@ export default function Dashprojects() {
                           <ProjEdit project={project} />
                         )}
                         <ProjPreview project={project} />
-                        <div>
-                          Share{" "}
-                          <a href={`/sharedProject/${project?.shareId}`}>
-                            link
-                          </a>
-                        </div>
+
+                        <button
+                          className="btn btn-success"
+                          onClick={(e) => {
+                            const elem = document.getElementById(
+                              `copyText${project?._id}`
+                            );
+                            elem.select();
+                            elem.setSelectionRange(0, 99999);
+                            document.execCommand("copy");
+                            e.currentTarget.innerHTML = "Link copied !!";
+                          }}
+                          onMouseOut={(e) => {
+                            e.currentTarget.innerHTML = "Copy Share Link !!";
+                          }}
+                        >
+                          Copy Share Link !!
+                        </button>
+                        <input
+                          style={{ opacity: 0 }}
+                          id={`copyText${project?._id}`}
+                          value={`${window.origin}/sharedProject/${project?.shareId}`}
+                        />
                       </div>
                     </div>
                   </Card.Body>
