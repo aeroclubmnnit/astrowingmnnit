@@ -88,35 +88,35 @@ function AstrophotoGraphy() {
       </div> */}
                   <div className="card hovpic astroproj">
                     {/* <p className="content_img"> */}
-                    <a href={`/astrophotography/${photo.id}`} ><img
-                      // className="evfeatured"
-                      src={photo.pic}
-                    // style={{
-                    //   width: "100%",
-                    //   maxHeight: "18rem",
-                    //   minHeight: "18rem",
-                    // }}
-                    /></a>
-
-                    <div
-                      className="card_text forphone forphone3 img-text"
-                      style={{ width: "100%", height: "3rem" }}
-                    >
-                      {/* <strong>Tags : </strong> */}
-                      <p style={{ paddingLeft: "2px" }}>Click to Know More </p>
-                      {photo.tags.map((tag, i) => (
-                        <h5
-                          className="d-inline"
-                          key={i}
-                          style={{ cursor: "pointer" }}
-                          onClick={(e) => handleTagFilter(tag)}
-                        >
-                          <span className="badge badge-primary my-1 mx-1">
-                            {tag.name}
-                          </span>
-                        </h5>
-                      ))}
-                    </div>
+                      <img
+                        // className="evfeatured"
+                        src={photo.pic}
+                        // style={{
+                        //   width: "100%",
+                        //   maxHeight: "18rem",
+                        //   minHeight: "18rem",
+                        // }}
+                      />
+                      
+                      <div
+                        className="card_text forphone forphone3 img-text"
+                        style={{ width: "100%", height: "3rem" }}
+                      >
+                        {/* <strong>Tags : </strong> */}
+                        <a href={`/astrophotography/${photo.id}`} ><p style={{paddingLeft:"2px"}} className="clickable">Click to Know More </p></a>
+                        {photo.tags.map((tag, i) => (
+                          <h5
+                            className="d-inline"
+                            key={i}
+                            style={{ cursor: "pointer" }}
+                            onClick={(e) => handleTagFilter(tag)}
+                          >
+                            <span className="badge badge-primary my-1 mx-1">
+                              {tag.name}
+                            </span>
+                          </h5>
+                        ))}
+                      </div>
                     {/* </p> */}
                     {/* <div
                       className="card_content forphone forphone1"
